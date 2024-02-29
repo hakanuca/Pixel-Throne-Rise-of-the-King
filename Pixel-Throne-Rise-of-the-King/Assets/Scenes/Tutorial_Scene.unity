@@ -8594,7 +8594,7 @@ GameObject:
   - component: {fileID: 1137653096}
   - component: {fileID: 1137653095}
   m_Layer: 0
-  m_Name: mahmut
+  m_Name: Main_Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
