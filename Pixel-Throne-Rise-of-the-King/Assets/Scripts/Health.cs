@@ -5,12 +5,33 @@ using UnityEngine.UIElements;
 
 public class Health : MonoBehaviour
 {
-    public int health;
-    public int numOfHearts;
+    [SerializeField] private float startingHealth;
+    public float currentHealth { get; private set; }
 
-    [SerializeField]
-    private Image[] hearts;
-    
-    public Sprite fullHeart;
-    public Sprite emptyHeart;
+    private void Awake() 
+    {
+        currentHealth = startingHealth;
+    }
+
+    public void TakeDamage(float _damage)
+    {
+        currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
+
+        if (currentHealth > 0) 
+        {
+
+        }
+        else 
+        {
+
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            TakeDamage(1);
+        }
+    }
 }
