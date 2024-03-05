@@ -39,3 +39,7 @@ public class PlayerCombat : MonoBehaviour
         Gizmos.DrawWireSphere(attackPoint.position,attackRange);
     }
 }
+
+
+
+// !!!!!! Hit animation should be more smother.

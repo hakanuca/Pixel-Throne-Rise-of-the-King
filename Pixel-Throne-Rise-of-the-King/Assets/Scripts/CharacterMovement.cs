@@ -109,6 +109,9 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
+
+
+    // This metgod should be changed for the better optimize version of the process.
     // Called when the Collider2D enters a trigger zone
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -126,3 +129,5 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 }
+
+
