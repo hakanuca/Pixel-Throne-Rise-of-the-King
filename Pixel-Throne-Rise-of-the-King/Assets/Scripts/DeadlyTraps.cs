@@ -7,8 +7,8 @@ public class DeadlyTraps : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
-        SceneManager.LoadScene(2);
-
+        SceneManager.LoadScene(currentSceneIndex);
     }
 }
