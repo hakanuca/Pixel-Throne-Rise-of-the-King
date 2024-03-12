@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ElevatorMovement : MonoBehaviour
 {
+    // This is the speed value of the elevator system. // Should be tested !!!!!
     public float speed = 2f;
     public Transform topPoint;
     public Transform bottomPoint;
