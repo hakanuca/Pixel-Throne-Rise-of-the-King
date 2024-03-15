@@ -109,9 +109,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 40
-        height: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,10 +129,10 @@ TextureImporter:
       name: burninglava1_1
       rect:
         serializedVersion: 2
-        x: 40
-        y: 0
-        width: 40
-        height: 64
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,6 +142,69 @@ TextureImporter:
       bones: []
       spriteID: 7fdd669a52bb9384e9b78b7b43613eb2
       internalID: 2018300188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burninglava1_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb91c325e9b0a474badb221f0d2ffe10
+      internalID: 1543228330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burninglava1_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b504482b8962d4da7f9fad856ba690
+      internalID: 562268434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burninglava1_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4726a051fb759d438e2d0b7a74c95a5
+      internalID: 428269752
       vertices: []
       indices: 
       edges: []
@@ -159,6 +222,9 @@ TextureImporter:
     nameFileIdTable:
       burninglava1_0: -14209317
       burninglava1_1: 2018300188
+      burninglava1_2: 1543228330
+      burninglava1_3: 562268434
+      burninglava1_4: 428269752
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
