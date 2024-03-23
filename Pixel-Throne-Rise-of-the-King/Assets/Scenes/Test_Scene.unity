@@ -8424,7 +8424,7 @@ GameObject:
   - component: {fileID: 1495247852}
   m_Layer: 0
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12595,10 +12595,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   extraSpeedFromApple: 5
-  jumpForce: 100
+  jumpForce: 6
   extraJumpFromApple: 3
   rb: {fileID: 1760236067}
-  isJumping: 0
   animator: {fileID: 1760236069}
 --- !u!95 &1760236069
 Animator:

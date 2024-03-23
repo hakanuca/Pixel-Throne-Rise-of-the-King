@@ -23,7 +23,9 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
 
     // Jumping control variables
-    public bool isJumping;
+    private bool isGrounded;
+    private string GROUND_TAG = "Ground";
+
     
     // Power-up status variables
     private bool extraSpeedActive = false;
@@ -79,10 +81,16 @@ public class CharacterMovement : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
         }
 
-        if (Input.GetButtonDown("Jump") && isJumping == false)
+        if(Input.GetButtonDown("Jump") && isGrounded)
         {
-            rb.AddForce(new Vector2(rb.velocity.x, jumpForce));
+            
+        animator.SetBool("IsJumping", true);
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        isGrounded = false;
+
+    
         }
+
 
         // Check for attack input
         if (Input.GetKeyDown(KeyCode.F))
@@ -91,21 +99,15 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision2D)
     {
-        if (other.gameObject.CompareTag("Ground")) 
+        if(collision2D.gameObject.CompareTag(GROUND_TAG))
         {
-            isJumping = false;
+            isGrounded = true;
+            
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (other.gameObject.CompareTag("Ground"))
-        {
-            isJumping = true;
-        }
-    }
 
     // This method should be changed for the better optimize version of the process.
     // Called when the Collider2D enters a trigger zone
