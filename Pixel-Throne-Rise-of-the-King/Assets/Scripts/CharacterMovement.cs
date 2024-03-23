@@ -26,7 +26,6 @@ public class CharacterMovement : MonoBehaviour
     private bool isGrounded;
     private string GROUND_TAG = "Ground";
 
-    
     // Power-up status variables
     private bool extraSpeedActive = false;
     private bool extraJumpActive = false;
@@ -82,13 +81,10 @@ public class CharacterMovement : MonoBehaviour
         }
 
         if(Input.GetButtonDown("Jump") && isGrounded)
-        {
-            
+        {   
         animator.SetBool("IsJumping", true);
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         isGrounded = false;
-
-    
         }
 
 
@@ -104,7 +100,6 @@ public class CharacterMovement : MonoBehaviour
         if(collision2D.gameObject.CompareTag(GROUND_TAG))
         {
             isGrounded = true;
-            
         }
     }
 

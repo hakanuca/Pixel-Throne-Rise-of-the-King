@@ -9,6 +9,7 @@ public class PlayerCombat : MonoBehaviour
     public float attackRange = 0.5f;
     public int attackDamage = 20;
     public LayerMask enemyLayers;
+    public float knockbackForce = 10f; // Adjust as needed
     
     void Update()
     {
