@@ -807,7 +807,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.4
+  m_FillAmount: 0.39
   m_FillClockwise: 0
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -12508,7 +12508,6 @@ GameObject:
   - component: {fileID: 1760236066}
   - component: {fileID: 1760236065}
   - component: {fileID: 1760236072}
-  - component: {fileID: 1760236073}
   m_Layer: 7
   m_Name: Main_Character
   m_TagString: Player
@@ -12700,21 +12699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937e0a6d437813849bfefbf3b2fc9ef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
---- !u!114 &1760236073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760236064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa817b3f7a4e07f46a01c1a9573df16b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0
-  playerHealth: {fileID: 0}
+  startingHealth: 4
 --- !u!1 &1789736021
 GameObject:
   m_ObjectHideFlags: 0
@@ -12893,7 +12878,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.4
+  m_FillAmount: 0.3
   m_FillClockwise: 0
   m_FillOrigin: 0
   m_UseSpriteMesh: 0

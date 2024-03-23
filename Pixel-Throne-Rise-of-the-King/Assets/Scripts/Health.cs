@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -29,9 +29,11 @@ public class Health : MonoBehaviour
 
     private void Update()
     {
+
+        
         if (Input.GetKeyDown(KeyCode.K))
         {
-            TakeDamage(1);
+            TakeDamage(1.3f);
         }
     }
 }
