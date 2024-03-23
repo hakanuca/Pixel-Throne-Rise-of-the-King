@@ -3,7 +3,6 @@
 //  GITHUB:https://github.com/HakanUca
 //------------------------------------
 
-
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
@@ -21,13 +20,11 @@ public class CharacterMovement : MonoBehaviour
     public float extraJumpFromApple = 3f;
 
     // Rigidbody component for physics interactions
-    private Rigidbody2D rb;
+    [SerializeField] private Rigidbody2D rb;
 
     // Jumping control variables
-    private bool canJump = true;
-    private float jumpCooldown = 1f;
-    private float jumpTimer = 0f;
-
+    public bool isJumping;
+    
     // Power-up status variables
     private bool extraSpeedActive = false;
     private bool extraJumpActive = false;
@@ -82,24 +79,9 @@ public class CharacterMovement : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
         }
 
-        // Check for jump input and handle jumping mechanics
-        if (canJump && Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isJumping == false)
         {
-            // Apply jump force, considering power-up status
-            float currentJumpForce = extraJumpActive ? jumpForce + extraJumpFromApple : jumpForce;
-            rb.velocity = new Vector2(rb.velocity.x, currentJumpForce);
-            canJump = false;
-            jumpTimer = jumpCooldown;
-        }
-
-        // Handle jump cooldown
-        if (!canJump)
-        {
-            jumpTimer -= Time.deltaTime;
-            if (jumpTimer <= 0f)
-            {
-                canJump = true;
-            }
+            rb.AddForce(new Vector2(rb.velocity.x, jumpForce));
         }
 
         // Check for attack input
@@ -109,9 +91,23 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (other.gameObject.CompareTag("Ground")) 
+        {
+            isJumping = false;
+        }
+    }
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            isJumping = true;
+        }
+    }
 
-    // This metgod should be changed for the better optimize version of the process.
+    // This method should be changed for the better optimize version of the process.
     // Called when the Collider2D enters a trigger zone
     private void OnTriggerEnter2D(Collider2D collision)
     {
