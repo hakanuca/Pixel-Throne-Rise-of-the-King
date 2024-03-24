@@ -26,6 +26,9 @@ public class CharacterMovement : MonoBehaviour
     private bool isGrounded;
     private string GROUND_TAG = "Ground";
 
+    //Knockback
+    private KnockbackOnPlayer knockback;
+
     // Power-up status variables
     private bool extraSpeedActive = false;
     private bool extraJumpActive = false;
@@ -52,10 +55,36 @@ public class CharacterMovement : MonoBehaviour
     {
         // Get the Rigidbody component attached to the character
         rb = GetComponent<Rigidbody2D>();
+        knockback = GetComponent<KnockbackOnPlayer>();
     }
 
     // Called once per frame
     private void Update()
+    {
+        if (!knockback.IsBeingKnockedBack)
+        {
+            Jump();
+            Move();
+        }
+        
+        // Check for attack input
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            animator.SetTrigger("Attack");
+        }
+    }
+
+    private void Jump()
+    {
+        if(Input.GetButtonDown("Jump") && isGrounded)
+        {   
+        animator.SetBool("IsJumping", true);
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        isGrounded = false;
+        }
+    }
+
+    private void Move()
     {
         // Read input for horizontal movement
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -78,20 +107,6 @@ public class CharacterMovement : MonoBehaviour
         else if (horizontalInput > 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
-        }
-
-        if(Input.GetButtonDown("Jump") && isGrounded)
-        {   
-        animator.SetBool("IsJumping", true);
-        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        isGrounded = false;
-        }
-
-
-        // Check for attack input
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            animator.SetTrigger("Attack");
         }
     }
 
