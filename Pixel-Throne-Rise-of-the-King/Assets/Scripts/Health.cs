@@ -35,7 +35,7 @@ public class Health : MonoBehaviour
 
 
         //knockback
-        knockback.CallKnocbkack
+        //knockback.CallKnocbkack
     }
 
     private void Update()
