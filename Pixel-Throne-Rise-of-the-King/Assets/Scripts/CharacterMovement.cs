@@ -61,17 +61,13 @@ public class CharacterMovement : MonoBehaviour
     // Called once per frame
     private void Update()
     {
-        if (!knockback.IsBeingKnockedBack)
-        {
+        //if (!knockback.IsBeingKnockedBack)
+        //{
             Jump();
             Move();
-        }
+        //}
         
-        // Check for attack input
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            animator.SetTrigger("Attack");
-        }
+        
     }
 
     private void Jump()
