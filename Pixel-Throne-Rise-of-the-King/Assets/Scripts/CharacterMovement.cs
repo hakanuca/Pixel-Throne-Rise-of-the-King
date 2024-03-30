@@ -3,6 +3,8 @@
 //  GITHUB:https://github.com/HakanUca
 //------------------------------------
 
+using System.Security.Cryptography;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
@@ -26,6 +28,9 @@ public class CharacterMovement : MonoBehaviour
     private bool isGrounded;
     private string GROUND_TAG = "Ground";
 
+    public Vector2 direction;
+    public GameObject[] sides;
+
     // Power-up status variables
     private bool extraSpeedActive = false;
     private bool extraJumpActive = false;
@@ -45,6 +50,7 @@ public class CharacterMovement : MonoBehaviour
         {
             _instance = this;
         }
+
     }
 
     // Called before the first frame update
@@ -59,11 +65,10 @@ public class CharacterMovement : MonoBehaviour
     private void Update()
     {
         
-            Jump();
-            Move();
-        
-        
-        
+        Jump();
+        Move();
+                
+
     }
 
     private void Jump()
@@ -100,7 +105,17 @@ public class CharacterMovement : MonoBehaviour
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
+
+        direction = new Vector2(horizontalInput, 0);
+        if (Input.GetMouseButtonDown(1) && !IsRolling.isRolling)
+        {
+            GetComponent<Animator>().SetTrigger("Rolling");
+            
+        }
     }
+
+
+    
 
     private void OnCollisionEnter2D(Collision2D collision2D)
     {
