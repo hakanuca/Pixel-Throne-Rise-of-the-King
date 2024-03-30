@@ -26,9 +26,6 @@ public class CharacterMovement : MonoBehaviour
     private bool isGrounded;
     private string GROUND_TAG = "Ground";
 
-    //Knockback
-    private KnockbackOnPlayer knockback;
-
     // Power-up status variables
     private bool extraSpeedActive = false;
     private bool extraJumpActive = false;
@@ -55,17 +52,16 @@ public class CharacterMovement : MonoBehaviour
     {
         // Get the Rigidbody component attached to the character
         rb = GetComponent<Rigidbody2D>();
-        knockback = GetComponent<KnockbackOnPlayer>();
+    
     }
 
     // Called once per frame
     private void Update()
     {
-        //if (!knockback.IsBeingKnockedBack)
-        //{
+        
             Jump();
             Move();
-        //}
+        
         
         
     }

@@ -7,6 +7,7 @@ TagManager:
   - Ladder
   - Main_Character
   - Ground
+  - attackpoint
   layers:
   - Default
   - TransparentFX

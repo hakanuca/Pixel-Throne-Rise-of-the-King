@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     public Animator animator;
     public int maxHealth = 100;
     int currentHealth;
-    
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -18,6 +18,8 @@ public class Enemy : MonoBehaviour
         currentHealth -= damage;
 
         animator.SetTrigger("Hurt");
+
+        
 
         if(currentHealth <= 0)
         {
@@ -33,4 +35,6 @@ public class Enemy : MonoBehaviour
         Destroy(this.gameObject,3f);
 
     }
+
+    
 }

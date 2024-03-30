@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
@@ -9,13 +11,18 @@ public class PlayerCombat : MonoBehaviour
     public float attackRange = 0.5f;
     public int attackDamage = 20;
     public LayerMask enemyLayers;
-    public float knockbackForce = 10f; // Adjust as needed
-    
+    public float attackRate = 2f;
+    private float nextAttackTime = 0f;
+
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Time.time >= nextAttackTime)
         {
-            Attack();
+            if(Input.GetMouseButtonDown(0))
+            {
+                Attack();
+                nextAttackTime = Time.time + 1f / attackRate;
+            }
         }
     }
 
@@ -23,12 +30,14 @@ public class PlayerCombat : MonoBehaviour
     void Attack()
     {
         animator.SetTrigger("Attack");
-
+        
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
     
         foreach(Collider2D enemy in hitEnemies)
         {
+            CinemachineShake.Instance.ShakeCamera(5f, .1f);
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            
         }
     }
 

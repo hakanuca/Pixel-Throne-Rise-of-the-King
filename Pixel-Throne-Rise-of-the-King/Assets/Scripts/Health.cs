@@ -8,16 +8,9 @@ public class Health : MonoBehaviour
     [SerializeField] private float startingHealth;
     public float currentHealth { get; private set; }
 
-    private KnockbackOnPlayer knockback;
-
     private void Awake() 
     {
         currentHealth = startingHealth;
-    }
-
-    private void Start() 
-    {
-        knockback = GetComponent<KnockbackOnPlayer>();
     }
 
     public void TakeDamage(float _damage)
@@ -32,16 +25,11 @@ public class Health : MonoBehaviour
         {
 
         }
-
-
-        //knockback
-        //knockback.CallKnocbkack
+     
     }
 
     private void Update()
     {
-
-        
         if (Input.GetKeyDown(KeyCode.K))
         {
             TakeDamage(1.3f);
