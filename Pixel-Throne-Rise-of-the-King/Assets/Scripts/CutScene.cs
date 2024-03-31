@@ -18,5 +18,10 @@ public class CutScene : MonoBehaviour
          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
 
    }
+   
+   public void DemoEnd () 
+   {
+         SceneManager.LoadScene(0);
 
+   }
 }

@@ -28,7 +28,7 @@ public class OpenDoor : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
-                StartCoroutine(ReloadSceneWithCooldown(3f));
+                StartCoroutine(ReloadSceneWithCooldown(1f));
             }
         }
     }
