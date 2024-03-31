@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
     [SerializeField] private float startingHealth;
     public float currentHealth { get; private set; }
+    public Animator anim;
+    private bool dead;
+    private bool cooldownActive = false;
 
     private void Awake() 
     {
@@ -19,20 +23,27 @@ public class Health : MonoBehaviour
 
         if (currentHealth > 0) 
         {
-
+            anim.SetTrigger("Hurt");
         }
         else 
         {
-
+            if (!dead)
+            {
+                anim.SetTrigger("Die");
+                GetComponent<CharacterMovement>().enabled = false;
+                GetComponent<PlayerCombat>().enabled = false;
+                dead = true;
+                StartCoroutine(ReloadSceneWithCooldown(3f));
+                
+           }
         }
-     
     }
 
-    private void Update()
+    private IEnumerator ReloadSceneWithCooldown(float cooldownTime)
     {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            TakeDamage(1.3f);
-        }
+        cooldownActive = true;
+        yield return new WaitForSeconds(cooldownTime);
+        SceneManager.LoadScene(0);
+        cooldownActive = false;
     }
 }

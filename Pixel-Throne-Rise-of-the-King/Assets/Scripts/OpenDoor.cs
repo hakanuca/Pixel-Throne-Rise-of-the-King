@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OpenDoor : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class OpenDoor : MonoBehaviour
     [SerializeField]
     private string sceneName;
     SceneSwitch sceneSwitch;
+    private Animator anim;
+    private bool cooldownActive = false;
+    
     private void Start()
     {
         sceneSwitch = FindObjectOfType<SceneSwitch>();
@@ -22,9 +26,9 @@ public class OpenDoor : MonoBehaviour
         playerDetected = Physics2D.OverlapBox(doorPos.position, new Vector2(width,height), 0, whatIsPlayer);
         if (playerDetected == true)
         {
-            if(Input.GetKey(KeyCode.E))
+            if(Input.GetKeyDown(KeyCode.E))
             {
-                sceneSwitch.SwitchScene(sceneName);
+                StartCoroutine(ReloadSceneWithCooldown(3f));
             }
         }
     }
@@ -35,4 +39,11 @@ public class OpenDoor : MonoBehaviour
         Gizmos.DrawWireCube(doorPos.position, new Vector3(width, height, 1));
     }
 
+    private IEnumerator ReloadSceneWithCooldown(float cooldownTime)
+    {
+        cooldownActive = true;
+        yield return new WaitForSeconds(cooldownTime);
+        sceneSwitch.SwitchScene(sceneName);
+        cooldownActive = false;
+    }
 }

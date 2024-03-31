@@ -669,7 +669,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641141123}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.77, y: 4.34, z: -1.3062308}
+  m_LocalPosition: {x: 5.07, y: 4.02, z: -1.3062308}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1796,7 +1796,7 @@ Transform:
   m_GameObject: {fileID: 1360236207}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.47, y: -1.98, z: -0.25254858}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.375, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1711736709}
@@ -12434,7 +12434,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711736708}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.4731445, y: 0.531258, z: 0}
+  m_LocalPosition: {x: 0.06, y: 0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12801,6 +12801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 4
+  anim: {fileID: 1760236069}
 --- !u!114 &1760236073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13189,7 +13190,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104505545}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.034682, y: 4.3043094, z: -1.3062308}
+  m_LocalPosition: {x: 9.12, y: 4, z: -1.3062308}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13210,7 +13211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firepoint: {fileID: 1805246514}
-  bullet: {fileID: 1058123617404265863, guid: 8fe351283f5a52d4aa0c9426e0000688, type: 3}
+  bullet: {fileID: 4496818378133910839, guid: 8fe351283f5a52d4aa0c9426e0000688, type: 3}
   startTimeBetween: 3
 --- !u!50 &2104505549
 Rigidbody2D:
