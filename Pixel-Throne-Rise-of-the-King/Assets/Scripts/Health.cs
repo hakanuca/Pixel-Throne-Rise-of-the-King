@@ -11,10 +11,12 @@ public class Health : MonoBehaviour
     public Animator anim;
     private bool dead;
     private bool cooldownActive = false;
+    AudioManager audioManager;
 
     private void Awake() 
     {
         currentHealth = startingHealth;
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     public void TakeDamage(float _damage)
@@ -30,6 +32,7 @@ public class Health : MonoBehaviour
             if (!dead)
             {
                 anim.SetTrigger("Die");
+                audioManager.PlaySFX(audioManager.death);
                 GetComponent<CharacterMovement>().enabled = false;
                 GetComponent<PlayerCombat>().enabled = false;
                 dead = true;
