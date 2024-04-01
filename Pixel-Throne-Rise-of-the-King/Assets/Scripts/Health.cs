@@ -32,11 +32,11 @@ public class Health : MonoBehaviour
             if (!dead)
             {
                 anim.SetTrigger("Die");
-                audioManager.PlaySFX(audioManager.death);
+                //audioManager.PlaySFX(audioManager.death);
                 GetComponent<CharacterMovement>().enabled = false;
                 GetComponent<PlayerCombat>().enabled = false;
                 dead = true;
-                StartCoroutine(ReloadSceneWithCooldown(3f));
+                //StartCoroutine(ReloadSceneWithCooldown(3f));
                 
            }
         }

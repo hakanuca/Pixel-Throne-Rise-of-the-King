@@ -1,8 +1,3 @@
-//------------------------------------
-//      HAKAN UCA
-//  GITHUB:https://github.com/HakanUca
-//------------------------------------
-
 using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;

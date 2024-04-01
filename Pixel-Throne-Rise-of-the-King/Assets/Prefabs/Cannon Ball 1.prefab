@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4496818378133910842}
   - component: {fileID: 4496818378133910843}
   - component: {fileID: 4496818378133910840}
-  - component: {fileID: 4496818378133910841}
   - component: {fileID: 4496818378133910838}
   m_Layer: 7
   m_Name: Cannon Ball 1
@@ -76,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 21
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 155520a97be66b94084e17c5d55b0c90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -122,20 +121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
---- !u!114 &4496818378133910841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4496818378133910839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa817b3f7a4e07f46a01c1a9573df16b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1.3
-  playerHealth: {fileID: 0}
 --- !u!58 &4496818378133910838
 CircleCollider2D:
   m_ObjectHideFlags: 0

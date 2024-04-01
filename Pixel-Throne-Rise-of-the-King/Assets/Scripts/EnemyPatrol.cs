@@ -1,60 +1,39 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyPatrol : MonoBehaviour
 {
-    public GameObject pointA;
-    public GameObject pointB;
-    private Rigidbody2D rb;
-    private Animator anim;
-    private Transform currentPoint;
-    public float speed;
+    public Transform pointA;
+    public Transform pointB;
+    public float speed = 1.0f;
 
-    private void Start() 
+    private Vector3 startPos;
+    private Vector3 endPos;
+    private float startTime;
+    private float journeyLength;
+
+    void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        currentPoint = pointB.transform;
-        anim.SetBool("IsRunning",true);
+        startPos = pointA.position;
+        endPos = pointB.position;
+        startTime = Time.time;
+        journeyLength = Vector3.Distance(startPos, endPos);
     }
 
-    private void Update() 
+    void Update()
     {
-        Vector2 point = currentPoint.position - transform.position;
-        if (currentPoint == pointB.transform)
-        {
-            rb.velocity = new Vector2(speed, 0);
-        }
-        else
-        {
-            rb.velocity = new Vector2(-speed, 0);
-        }
+        float distCovered = (Time.time - startTime) * speed;
+        float fracJourney = distCovered / journeyLength;
+        transform.position = Vector3.Lerp(startPos, endPos, fracJourney);
 
-        if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
+        if (fracJourney >= 1.0f)
         {
-            Flip();
-            currentPoint = pointA.transform;
-        }
-        if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointA.transform)
-        {
-            Flip();
-            currentPoint = pointB.transform;
+            // Swap start and end points
+            Vector3 temp = startPos;
+            startPos = endPos;
+            endPos = temp;
+
+            // Reset start time
+            startTime = Time.time;
         }
     }
-
-    private void Flip()
-    {
-        Vector3 localScale = transform.localScale;
-        localScale.x *= -1;
-        transform.localScale = localScale;
-    }
-
-    private void OnDrawGizmos() 
-    {
-        Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
-        Gizmos.DrawWireSphere(pointB.transform.position, 0.5f);
-        Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
-    }
-
 }
