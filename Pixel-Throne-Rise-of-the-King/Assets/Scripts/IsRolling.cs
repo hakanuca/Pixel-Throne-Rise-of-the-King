@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IsRolling : MonoBehaviour
 {
-    public static bool isRolling;
+    /*public static bool isRolling;
 
     public void roll()
     {
@@ -15,6 +15,6 @@ public class IsRolling : MonoBehaviour
     {
         isRolling = false;
         transform.Rotate(0, 0, 0);
-    }
+    }*/
 
 }

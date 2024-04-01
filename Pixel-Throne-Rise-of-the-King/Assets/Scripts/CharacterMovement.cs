@@ -109,12 +109,12 @@ public class CharacterMovement : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
         }
 
-        direction = new Vector2(horizontalInput, 0);
+        /*direction = new Vector2(horizontalInput, 0);
         if (Input.GetMouseButtonDown(1) && !IsRolling.isRolling)
         {
             GetComponent<Animator>().SetTrigger("Rolling");
             
-        }
+        }*/
     }
 
 
