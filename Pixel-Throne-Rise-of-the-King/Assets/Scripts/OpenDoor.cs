@@ -10,15 +10,15 @@ public class OpenDoor : MonoBehaviour
     public float width;
     public float height;
     public LayerMask whatIsPlayer;
-    [SerializeField]
-    private string sceneName;
-    SceneSwitch sceneSwitch;
-    private Animator anim;
-    private bool cooldownActive = false;
+    [SerializeField] private int sceneNumber;
+    //private string sceneName;
+    //SceneSwitch sceneSwitch;
+    //private Animator anim;
+    //private bool cooldownActive = false;
     
     private void Start()
     {
-        sceneSwitch = FindObjectOfType<SceneSwitch>();
+        //sceneSwitch = FindObjectOfType<SceneSwitch>();
     }
 
     private void Update()
@@ -28,8 +28,10 @@ public class OpenDoor : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
-                StartCoroutine(ReloadSceneWithCooldown(1f));
+                SceneManager.LoadScene(sceneNumber);
+                //StartCoroutine(ReloadSceneWithCooldown(1f));
             }
+            
         }
     }
 
@@ -39,11 +41,11 @@ public class OpenDoor : MonoBehaviour
         Gizmos.DrawWireCube(doorPos.position, new Vector3(width, height, 1));
     }
 
-    private IEnumerator ReloadSceneWithCooldown(float cooldownTime)
+    /*private IEnumerator ReloadSceneWithCooldown(float cooldownTime)
     {
         cooldownActive = true;
         yield return new WaitForSeconds(cooldownTime);
         sceneSwitch.SwitchScene(sceneName);
         cooldownActive = false;
-    }
+    }*/
 }
