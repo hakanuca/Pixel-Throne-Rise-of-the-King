@@ -915,19 +915,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.05
-  yazi: 'In a different universe, in medieval times, a kingdom ruled the world. During
-    the reign of this kingdom, a new virus appeared, and the pigs gained awareness.
-    While the pigs, who did not want to live under human rule, were preparing for
-    a rebellion, the king became aware of this situation and married the strongest
-    woman of the pigs to prevent the war.
+  yazi: 'In a different universe, in medieval times, a kingdom ruled the world...
 
 
-    Years went by and then a new heir
-    was born from this marriage, and when the king died, he succeeded him. While
-    the new king was just getting used to ruling his kingdom, James Porker, the folk
-    hero of the pigs, and his team revolted his own people and seized the throne.
-    The new king must try to reclaim his kingdom and he needs to find the connection
-    between him and the folk hero of the pigs.'
+    The
+    king and his kingdom suffer a great defeat'
 --- !u!82 &748166831
 AudioSource:
   m_ObjectHideFlags: 0

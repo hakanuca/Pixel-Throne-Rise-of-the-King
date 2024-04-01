@@ -18,8 +18,8 @@ public class CharacterMovement : MonoBehaviour
     public float extraSpeedFromApple = 5f;
 
     // Jumping variables
-    public float jumpForce = 10f;
-    public float extraJumpFromApple = 3f;
+    public float jumpForce;
+    public float extraJumpFromApple;
 
     // Rigidbody component for physics interactions
     [SerializeField] private Rigidbody2D rb;
@@ -76,6 +76,14 @@ public class CharacterMovement : MonoBehaviour
         if(Input.GetButtonDown("Jump") && isGrounded)
         {   
         animator.SetBool("IsJumping", true);
+
+        /*
+        // Broken code !!!! DO NOT USE THIS CODE THIS CODE UPDATE THE JUMP FORCE IN EVERY ITERATION.
+        if (extraJumpActive == true ) // extra jump active control.
+        {
+            jumpForce = jumpForce + extraJumpFromApple;
+        }
+        */
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         isGrounded = false;
         }
@@ -128,20 +136,21 @@ public class CharacterMovement : MonoBehaviour
 
     // This method should be changed for the better optimize version of the process.
     // Called when the Collider2D enters a trigger zone
+
+    // tHIS METHOD IS NECESSARY FOR THE JUMP UPDATE.
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Check for collision with speed power-up
-        if (collision.gameObject.name == "Potion")
-        {
-            extraSpeedActive = true;
-            Destroy(collision.gameObject);
-        }
-        // Check for collision with jump power-up
+    
         if (collision.gameObject.name == "PotionJump")
         {
-            extraJumpActive = true;
+            extraJumpActive = true; // it sets the extra jump operations boolean type true.
+
+            jumpForce = jumpForce + extraJumpFromApple; // it updates the jumpforce for just one moment.
+
             Destroy(collision.gameObject);
         }
+
+        
     }
 }
 
