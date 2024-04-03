@@ -1,6 +1,8 @@
 using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -62,6 +64,7 @@ public class CharacterMovement : MonoBehaviour
         
         Jump();
         Move();
+
                 
 
     }
