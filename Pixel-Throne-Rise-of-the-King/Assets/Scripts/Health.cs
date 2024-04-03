@@ -12,6 +12,8 @@ public class Health : MonoBehaviour
     private bool dead;
     private bool cooldownActive = false;
     AudioManager audioManager;
+    private bool IsAvailable = true;
+    private int CooldownDuration = 1;
 
     private void Awake() 
     {
@@ -21,8 +23,13 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float _damage)
     {
+        if (IsAvailable == false)
+		{
+			return;
+		}
+        
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
-
+        
         if (currentHealth > 0) 
         {
             anim.SetTrigger("Hurt");
@@ -40,6 +47,7 @@ public class Health : MonoBehaviour
                 
            }
         }
+        StartCoroutine(StartCooldown());
     }
 
     private IEnumerator ReloadSceneWithCooldown(float cooldownTime)
@@ -49,4 +57,13 @@ public class Health : MonoBehaviour
         SceneManager.LoadScene(0);
         cooldownActive = false;
     }
+
+    public IEnumerator StartCooldown()
+	{
+		IsAvailable = false;
+
+		yield return new WaitForSeconds(CooldownDuration);
+
+		IsAvailable = true;
+	}
 }
