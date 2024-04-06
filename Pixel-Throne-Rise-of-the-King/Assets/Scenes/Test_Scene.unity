@@ -1719,7 +1719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1760236064}
-  speed: 0
+  speed: 2
   distanceBetween: 20
 --- !u!114 &1240844236
 MonoBehaviour:
