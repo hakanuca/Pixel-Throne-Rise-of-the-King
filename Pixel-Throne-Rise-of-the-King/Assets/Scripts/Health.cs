@@ -15,7 +15,7 @@ public class Health : MonoBehaviour
     private bool IsAvailable = true;
     private int CooldownDuration = 1;
 
-    private void Awake() 
+    private void Awake()
     {
         currentHealth = startingHealth;
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
@@ -24,17 +24,17 @@ public class Health : MonoBehaviour
     public void TakeDamage(float _damage)
     {
         if (IsAvailable == false)
-		{
-			return;
-		}
-        
+        {
+            return;
+        }
+
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
-        
-        if (currentHealth > 0) 
+
+        if (currentHealth > 0)
         {
             anim.SetTrigger("Hurt");
         }
-        else 
+        else
         {
             if (!dead)
             {
@@ -44,12 +44,15 @@ public class Health : MonoBehaviour
                 GetComponent<PlayerCombat>().enabled = false;
                 dead = true;
                 //StartCoroutine(ReloadSceneWithCooldown(3f));
-                
-           }
+
+            }
         }
         StartCoroutine(StartCooldown());
     }
-
+    public void AddHealth(float _value)
+    {
+        currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
+    }
     private IEnumerator ReloadSceneWithCooldown(float cooldownTime)
     {
         cooldownActive = true;
@@ -59,11 +62,11 @@ public class Health : MonoBehaviour
     }
 
     public IEnumerator StartCooldown()
-	{
-		IsAvailable = false;
+    {
+        IsAvailable = false;
 
-		yield return new WaitForSeconds(CooldownDuration);
+        yield return new WaitForSeconds(CooldownDuration);
 
-		IsAvailable = true;
-	}
+        IsAvailable = true;
+    }
 }
