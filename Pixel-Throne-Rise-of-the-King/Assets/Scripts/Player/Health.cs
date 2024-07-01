@@ -18,11 +18,16 @@ public class Health : MonoBehaviour
     private void Awake()
     {
         currentHealth = startingHealth;
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        //audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     public void TakeDamage(float _damage)
     {
+        if (GetComponent<IsRolling>().isRolling)
+        {
+            return;
+        }
+        
         if (IsAvailable == false)
         {
             return;
@@ -47,6 +52,7 @@ public class Health : MonoBehaviour
 
             }
         }
+        
         StartCoroutine(StartCooldown());
     }
     public void AddHealth(float _value)

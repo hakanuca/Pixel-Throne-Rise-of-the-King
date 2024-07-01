@@ -39,9 +39,4 @@ public class PatrollingEnemy : Enemy
             collision.gameObject.GetComponent<Health>().TakeDamage(damage);
         }
     }
-
-    public override void TakeDamage(int damage)
-    {
-        base.TakeDamage(damage);
-    }
 }
