@@ -4,38 +4,38 @@ public class PatrollingEnemy : Enemy
 {
     public Transform pointA;
     public Transform pointB;
-    public float speed;
-    private Vector3 targetPoint;
-    public int damage;
+    public float speed = 2f;
+    private Vector3 nextPosition;
+    public float damage = 1.3f;
 
     protected override void Start()
     {
         base.Start();
-        targetPoint = pointA.position;
+        if (pointA != null)
+        {
+            nextPosition = pointA.position;
+        }
     }
 
     void Update()
     {
-        Move();
+        if (Vector3.Distance(transform.position, nextPosition) < 0.1f)
+        {
+            nextPosition = nextPosition == pointA.position ? pointB.position : pointA.position;
+        }
+        MoveTowardsNextPosition();
     }
 
-    void Move()
+    void MoveTowardsNextPosition()
     {
-        transform.position = Vector2.MoveTowards(transform.position, targetPoint, speed * Time.deltaTime);
-        if (Vector2.Distance(transform.position, pointA.position) < 0.1f)
-        {
-            targetPoint = pointB.position;
-        }
-        else if (Vector2.Distance(transform.position, pointB.position) < 0.1f)
-        {
-            targetPoint = pointA.position;
-        }
+        transform.position = Vector3.MoveTowards(transform.position, nextPosition, speed * Time.deltaTime);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            // Assuming there's a Health component on the player that has a TakeDamage method.
             collision.gameObject.GetComponent<Health>().TakeDamage(damage);
         }
     }
