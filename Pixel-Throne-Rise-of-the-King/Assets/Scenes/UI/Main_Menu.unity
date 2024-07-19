@@ -1231,7 +1231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 605371001}
   SFXSource: {fileID: 1289453596}
-  background: {fileID: 8300000, guid: 43a1bf0316bbb6d47bb8e79cd98543b3, type: 3}
+  background: {fileID: 8300000, guid: 9ea4aa3c5c97b914aa9b31dca3edc8f1, type: 3}
   death: {fileID: 8300000, guid: 9b583394be85eb04e972280aa8804471, type: 3}
   hit: {fileID: 0}
 --- !u!4 &305703338
@@ -5860,8 +5860,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.21854973, y: 0.12035012, z: 0}
-    m_Extent: {x: 9.91255, y: 5.9935503, z: 0}
+    m_Center: {x: 0.22055006, y: 0.1164999, z: 0}
+    m_Extent: {x: 9.911249, y: 5.9891, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6628,8 +6628,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.06884998, y: -0.016449988, z: 0}
-    m_Extent: {x: 1.54375, y: 1.2507501, z: 0}
+    m_Center: {x: 0.07990003, y: -0.018050015, z: 0}
+    m_Extent: {x: 1.5358, y: 1.2479501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
