@@ -23,7 +23,7 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float _damage)
     {
-        if (GetComponent<IsRolling>().isRolling)
+        if (GetComponent<DodgeRoll>().isRolling)
         {
             return;
         }
