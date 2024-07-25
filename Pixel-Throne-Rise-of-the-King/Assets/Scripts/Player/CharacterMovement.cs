@@ -47,7 +47,6 @@ public class CharacterMovement : MonoBehaviour
         {
             _instance = this;
         }
-
     }
 
     // Called before the first frame update
@@ -61,12 +60,8 @@ public class CharacterMovement : MonoBehaviour
     // Called once per frame
     private void Update()
     {
-        
         Jump();
         Move();
-
-                
-
     }
 
     private void Jump()
@@ -74,7 +69,6 @@ public class CharacterMovement : MonoBehaviour
         if(Input.GetButtonDown("Jump") && isGrounded)
         {   
         animator.SetBool("IsJumping", true);
-
         /*
         // Broken code !!!! DO NOT USE THIS CODE THIS CODE UPDATE THE JUMP FORCE IN EVERY ITERATION.
         if (extraJumpActive == true ) // extra jump active control.
@@ -111,18 +105,8 @@ public class CharacterMovement : MonoBehaviour
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
-
-        /*direction = new Vector2(horizontalInput, 0);
-        if (Input.GetMouseButtonDown(1) && !IsRolling.isRolling)
-        {
-            GetComponent<Animator>().SetTrigger("Rolling");
-            
-        }*/
     }
-
-
     
-
     private void OnCollisionEnter2D(Collision2D collision2D)
     {
         if(collision2D.gameObject.CompareTag(GROUND_TAG))
@@ -130,15 +114,13 @@ public class CharacterMovement : MonoBehaviour
             isGrounded = true;
         }
     }
-
-
+    
     // This method should be changed for the better optimize version of the process.
     // Called when the Collider2D enters a trigger zone
 
     // tHIS METHOD IS NECESSARY FOR THE JUMP UPDATE.
     private void OnTriggerEnter2D(Collider2D collision)
     {
-    
         if (collision.gameObject.name == "PotionJump")
         {
             extraJumpActive = true; // it sets the extra jump operations boolean type true.
@@ -147,8 +129,6 @@ public class CharacterMovement : MonoBehaviour
 
             Destroy(collision.gameObject);
         }
-
-        
     }
 }
 
