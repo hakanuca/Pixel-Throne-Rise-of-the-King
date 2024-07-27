@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
@@ -31,7 +32,7 @@ public class CharacterMovement : MonoBehaviour
 
     // Animator component for character animations
     public Animator animator;
-
+    public bool isDoorTriggered;
     // Called when the script instance is being loaded
     private void Awake()
     {
@@ -118,7 +119,7 @@ public class CharacterMovement : MonoBehaviour
         }
     }
     
-    public void PlayDoorTriggeredAnimation()
+    public void PlayAnimation()
     {
         animator.SetBool("IsDoorTriggered", true);
     }

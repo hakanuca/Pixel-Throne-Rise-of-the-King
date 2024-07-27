@@ -15,7 +15,6 @@ public class InteractableDoor : IInteractable
             doorAnimator.SetBool("IsTriggered", true);
             if (Input.GetKeyDown(KeyCode.E))
             {
-                CharacterMovement.Instance.PlayDoorTriggeredAnimation();
                 Interact();
             }
         }
