@@ -1,23 +1,24 @@
 using UnityEngine;
 
-public class BossRun : StateMachineBehaviour
+public class BossRunAndMelee : StateMachineBehaviour
 {
     public float speed = 2.5f;
     public float attackRange = 3f;
 
     private Transform player;
     Rigidbody2D rb;
-    BossBase bossBase;
+    Boss boss;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
+        boss = animator.GetComponent<Boss>(); 
     }
     
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        bossBase.LookAtPlayer();
+        boss.LookAtPlayer();
         Vector2 target = new Vector2(player.position.x, rb.position.y);
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
         rb.MovePosition(newPos);

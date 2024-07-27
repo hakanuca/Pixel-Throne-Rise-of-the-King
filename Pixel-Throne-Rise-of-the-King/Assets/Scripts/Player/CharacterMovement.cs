@@ -1,12 +1,14 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
+    #region Singleton
     // Singleton instance for easy access from other scripts
     private static CharacterMovement _instance;
     public static CharacterMovement Instance { get { return _instance; } }
-
+    #endregion
+    
+    #region Variables
     // Movement speed variables
     public float moveSpeed = 0f;
     public float extraSpeedFromApple = 5f;
@@ -33,6 +35,11 @@ public class CharacterMovement : MonoBehaviour
     // Animator component for character animations
     public Animator animator;
     public bool isDoorTriggered;
+    
+    #endregion
+
+    #region Event Functions
+
     // Called when the script instance is being loaded
     private void Awake()
     {
@@ -60,6 +67,10 @@ public class CharacterMovement : MonoBehaviour
         Jump();
         Move();
     }
+
+    #endregion
+
+    #region Movement Functions
 
     private void Jump()
     {
@@ -101,6 +112,10 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
+    #endregion
+
+    #region Collision Functions
+
     private void OnCollisionEnter2D(Collision2D collision2D)
     {
         if(collision2D.gameObject.CompareTag(GROUND_TAG))
@@ -118,10 +133,17 @@ public class CharacterMovement : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
-    
+
+    #endregion
+
+    #region Animation Functions
+
     public void PlayAnimation()
     {
         animator.SetBool("IsDoorTriggered", true);
     }
+
+    #endregion
+    
 }
 
