@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class BossLaserAttack : MonoBehaviour
+public class BossLaserAttack : StateMachineBehaviour
 {
     public GameObject laserPrefab;
     public float timeBetweenAttacks = 3f;
@@ -12,39 +12,38 @@ public class BossLaserAttack : MonoBehaviour
     private bool isAttacking;
     private float timeSinceLastAttack;
     private Boss boss;
+    Rigidbody2D rb;
+    
+    
 
-    void Start()
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        boss = GetComponent<Boss>();
+        rb = animator.GetComponent<Rigidbody2D>();
+        boss = animator.GetComponent<Boss>();
     }
-
-    void Update()
+    
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (isAttacking)
+        if (Vector2.Distance(player.position, boss.transform.position) <= attackRange)
         {
-            timeSinceLastAttack += Time.deltaTime;
-            if (timeSinceLastAttack >= attackDuration)
+            if (!isAttacking)
             {
-                isAttacking = false;
-                timeSinceLastAttack = 0f;
+                if (timeSinceLastAttack <= 0)
+                {
+                    isAttacking = true;
+                    boss.StartCoroutine(Attack());
+                }
+                else
+                {
+                    timeSinceLastAttack -= Time.deltaTime;
+                }
             }
         }
-        else if (Vector2.Distance(player.position, transform.position) <= attackRange)
-        {
-            boss.LookAtPlayer();
-            StartCoroutine(Attack());
-        }
     }
-
-    IEnumerator Attack()
+    
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        isAttacking = true;
-        yield return new WaitForSeconds(timeBetweenAttacks);
-
-        GameObject laser = Instantiate(laserPrefab, transform.position, Quaternion.identity);
-        Vector2 direction = player.position - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        laser.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        animator.ResetTrigger("Attack");
     }
 }
