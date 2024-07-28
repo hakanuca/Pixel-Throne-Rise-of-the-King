@@ -25,25 +25,11 @@ public class BossLaserAttack : StateMachineBehaviour
     
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Vector2.Distance(player.position, boss.transform.position) <= attackRange)
-        {
-            if (!isAttacking)
-            {
-                if (timeSinceLastAttack <= 0)
-                {
-                    isAttacking = true;
-                    boss.StartCoroutine(Attack());
-                }
-                else
-                {
-                    timeSinceLastAttack -= Time.deltaTime;
-                }
-            }
-        }
+        
     }
     
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.ResetTrigger("Attack");
+        animator.ResetTrigger("Laser");
     }
 }

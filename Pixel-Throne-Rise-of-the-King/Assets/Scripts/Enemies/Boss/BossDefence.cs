@@ -1,25 +1,20 @@
 using System.Collections;
 using UnityEngine;
 
-public class BossDefence : MonoBehaviour
+public class BossDefence : StateMachineBehaviour
 {
-    public float invincibleTime = 2f;
-    private bool isInvincible = false;
-    
-    public void TakeDamage(int damage)
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (!isInvincible)
-        {
-            StartCoroutine(Invincible());
-            var currentHealth = damage;
-            //healthBar.SetHealth(currentHealth);
-        }
+        
     }
     
-    IEnumerator Invincible()
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        isInvincible = true;
-        yield return new WaitForSeconds(invincibleTime);
-        isInvincible = false;
+        
+    }
+    
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        animator.ResetTrigger("Defense");
     }
 }
