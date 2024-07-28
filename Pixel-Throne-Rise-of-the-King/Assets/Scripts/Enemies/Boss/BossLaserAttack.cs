@@ -12,9 +12,8 @@ public class BossLaserAttack : StateMachineBehaviour
     private bool isAttacking;
     private float timeSinceLastAttack;
     private Boss boss;
+    private Transform bossTransform;
     Rigidbody2D rb;
-    
-    
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -25,7 +24,15 @@ public class BossLaserAttack : StateMachineBehaviour
     
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        Vector2 direction = player.position - bossTransform.position;
+        RaycastHit2D hit = Physics2D.Raycast(rb.position, direction, attackRange, LayerMask.GetMask("Player"));
+        if (hit.collider != null)
+        {
+            isAttacking = true;
+            boss.LookAtPlayer();
+            animator.SetTrigger("Laser");
+            
+        }
     }
     
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
