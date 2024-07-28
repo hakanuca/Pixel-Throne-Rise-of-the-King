@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
+    
     #region Singleton
     // Singleton instance for easy access from other scripts
     private static CharacterMovement _instance;
@@ -140,7 +141,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void PlayAnimation()
     {
-        animator.SetBool("IsDoorTriggered", true);
+        animator.SetTrigger("IsDoorTriggered");
     }
 
     #endregion

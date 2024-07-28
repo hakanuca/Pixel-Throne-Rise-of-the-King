@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class BossDefence : MonoBehaviour
 {
-    //write class that makes boss invincible for a short period of time after taking damage
-    
     public float invincibleTime = 2f;
     private bool isInvincible = false;
     
