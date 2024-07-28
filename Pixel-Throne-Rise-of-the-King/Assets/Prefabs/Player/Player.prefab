@@ -44,6 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b868288edc2af42b5bc8549d60d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rollDuration: 1
+  rollSpeed: 5
+  rollCooldown: 1
+  isRolling: 0
 --- !u!1 &8745513317403799530
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,6 +123,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b868288edc2af42b5bc8549d60d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rollDuration: 1
+  rollSpeed: 5
+  rollCooldown: 1
+  isRolling: 0
 --- !u!1 &8745513318249212135
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,19 +253,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8745513318249212135}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d5637586162e6348b09a97ca61d1c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
   extraSpeedFromApple: 5
+  sprintMultiplier: 2
   jumpForce: 6
   extraJumpFromApple: 3
   rb: {fileID: 8745513318249212132}
   direction: {x: 0, y: 0}
   sides: []
   animator: {fileID: 8745513318249212130}
+  isDoorTriggered: 0
 --- !u!50 &8745513318249212132
 Rigidbody2D:
   serializedVersion: 4
@@ -312,7 +322,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8745513318249212135}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db569c0e0c43a6a4dbb41316fc436ad0, type: 3}
   m_Name: 
@@ -412,3 +422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b868288edc2af42b5bc8549d60d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rollDuration: 1
+  rollSpeed: 5
+  rollCooldown: 1
+  isRolling: 0
