@@ -27,11 +27,13 @@ public class PlayerCombat : MonoBehaviour
         animator.SetTrigger("Attack");
         
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-    
+        Collider2D BossHealth = Physics2D.OverlapCircle(attackPoint.position, attackRange, LayerMask.GetMask("BossHealth"));
+        BossHealth.GetComponent<BossHealth>().TakeDamage(attackDamage);
         foreach(Collider2D enemy in hitEnemies)
         {
             CinemachineShake.Instance.ShakeCamera(5f, .1f);
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            
         }
     }
     

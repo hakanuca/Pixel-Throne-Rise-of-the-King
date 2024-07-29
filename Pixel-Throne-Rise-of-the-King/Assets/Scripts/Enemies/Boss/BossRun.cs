@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BossRunAndMelee : StateMachineBehaviour
+public class BossRun : StateMachineBehaviour
 {
     public float speed = 2.5f;
     public float attackRange = 3f;
