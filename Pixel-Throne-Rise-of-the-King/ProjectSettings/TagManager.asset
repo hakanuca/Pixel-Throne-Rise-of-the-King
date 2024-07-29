@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - attackpoint
   - Audio
+  - GM
   layers:
   - Default
   - TransparentFX
