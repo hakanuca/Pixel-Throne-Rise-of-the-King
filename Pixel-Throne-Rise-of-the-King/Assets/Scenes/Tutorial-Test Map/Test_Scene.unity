@@ -1050,7 +1050,7 @@ Tilemap:
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -10, y: -5, z: 0}
-  m_Size: {x: 70, y: 23, z: 1}
+  m_Size: {x: 382, y: 707, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -1296,7 +1296,10 @@ GameObject:
   - component: {fileID: 1305645968}
   - component: {fileID: 1305645967}
   - component: {fileID: 1305645969}
-  m_Layer: 0
+  - component: {fileID: 1305645971}
+  - component: {fileID: 1305645970}
+  - component: {fileID: 1305645972}
+  m_Layer: 10
   m_Name: MainBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1453,6 +1456,54 @@ MonoBehaviour:
   player: {fileID: 1760236071}
   isFlipped: 0
   canTakeDamage: 1
+--- !u!114 &1305645970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305645963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d785f002a6bd8449f7f3240b72f699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 20
+  enragedAttackDamage: 40
+  attackOffset: {x: 0, y: 0, z: 0}
+  attackRange: 1
+  attackMask:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!114 &1305645971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305645963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11b2132a185afaa4d817363a195cd3f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1305645964}
+  maxHealth: 4
+  currentHealth: 4
+--- !u!114 &1305645972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305645963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa817b3f7a4e07f46a01c1a9573df16b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  playerHealth: {fileID: 1760236072}
 --- !u!1 &1368129982
 GameObject:
   m_ObjectHideFlags: 0
@@ -11987,6 +12038,22 @@ PrefabInstance:
     - target: {fileID: 8745513318249212128, guid: 0fda6c094069eab41bdacbfe7ddd82b4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8745513318249212131, guid: 0fda6c094069eab41bdacbfe7ddd82b4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8745513318249212134, guid: 0fda6c094069eab41bdacbfe7ddd82b4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8745513318249212134, guid: 0fda6c094069eab41bdacbfe7ddd82b4, type: 3}
+      propertyPath: attackDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8745513318249212134, guid: 0fda6c094069eab41bdacbfe7ddd82b4, type: 3}
+      propertyPath: enemyLayers.m_Bits
+      value: 1088
       objectReference: {fileID: 0}
     - target: {fileID: 8745513318249212135, guid: 0fda6c094069eab41bdacbfe7ddd82b4, type: 3}
       propertyPath: m_Name

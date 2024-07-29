@@ -6,6 +6,7 @@ public class PlayerCombat : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public int attackDamage = 20;
+    public int bossAttackDamage = 2;
     public LayerMask enemyLayers;
     public float attackRate = 2f;
     private float nextAttackTime = 0f;
@@ -17,6 +18,7 @@ public class PlayerCombat : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.K))
             {
                 Attack();
+                AttackBoss();
                 nextAttackTime = Time.time + 1f / attackRate;
             }
         }
@@ -25,15 +27,44 @@ public class PlayerCombat : MonoBehaviour
     void Attack()
     {
         animator.SetTrigger("Attack");
-        
+
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-        Collider2D BossHealth = Physics2D.OverlapCircle(attackPoint.position, attackRange, LayerMask.GetMask("BossHealth"));
-        BossHealth.GetComponent<BossHealth>().TakeDamage(attackDamage);
-        foreach(Collider2D enemy in hitEnemies)
+        
+
+        
+
+        foreach (Collider2D enemy in hitEnemies)
         {
             CinemachineShake.Instance.ShakeCamera(5f, .1f);
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
-            
+            Enemy enemyComponent = enemy.GetComponent<Enemy>();
+            if (enemyComponent != null)
+            {
+                enemyComponent.TakeDamage(attackDamage);
+            }
+        }
+    }
+
+    void AttackBoss()
+    {
+        animator.SetTrigger("Attack");
+        Collider2D bossHealthCollider = Physics2D.OverlapCircle(attackPoint.position, attackRange, LayerMask.GetMask("Boss"));
+        if (bossHealthCollider != null)
+        {
+            Debug.Log("Boss hit detected");
+            BossHealth bossHealth = bossHealthCollider.GetComponent<BossHealth>();
+            if (bossHealth != null)
+            {
+                Debug.Log("BossHealth component found");
+                bossHealth.TakeDamage(bossAttackDamage);
+            }
+            else
+            {
+                Debug.Log("BossHealth component not found");
+            }
+        }
+        else
+        {
+            Debug.Log("Boss not hit");
         }
     }
     

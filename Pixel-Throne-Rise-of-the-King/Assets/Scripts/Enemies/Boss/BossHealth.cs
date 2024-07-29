@@ -3,7 +3,7 @@ using UnityEngine;
 public class BossHealth : MonoBehaviour
 {
     public Animator animator;
-    public int maxHealth = 100;
+    public int maxHealth = 4;
     public int currentHealth;
     
     private void Start()
@@ -16,6 +16,11 @@ public class BossHealth : MonoBehaviour
         currentHealth -= damage;
         animator.SetTrigger("Glowing");
 
+        if (currentHealth <= 2)
+        {
+            GetComponent<Animator>().SetBool("Defence", true);
+        }
+        
         if(currentHealth <= 0)
         {
             Die();
