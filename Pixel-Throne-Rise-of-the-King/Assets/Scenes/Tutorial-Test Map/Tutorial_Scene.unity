@@ -189,8 +189,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 4.44805, y: 2.97475, z: 0}
-    m_Extent: {x: 2.0840502, y: 2.4363499, z: 0}
+    m_Center: {x: 4.4413, y: 2.97, z: 0}
+    m_Extent: {x: 2.0818, y: 2.4374, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -618,8 +618,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 19.11105}
-  m_SizeDelta: {x: 0, y: 38.2221}
+  m_AnchoredPosition: {x: 0, y: 29.556}
+  m_SizeDelta: {x: 0, y: 59.111}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &301986263
 MonoBehaviour:
@@ -634,7 +634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.49803922}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -643,7 +643,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 26
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -654,7 +654,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TAKO AND WIIQ GAMES                                    VERSION 1.2.1
+  m_Text: "A/D - Walking\r\tE - objects/NPCs\r\tK - attack\r\tL - dodge\r\t\nLEFT
+    SHIFT - sprinting\r\tSpace - jumping\r\n"
 --- !u!222 &301986264
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1214,8 +1215,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 4.44415, y: 2.96595, z: 0}
-    m_Extent: {x: 2.08215, y: 2.43405, z: 0}
+    m_Center: {x: 4.4497, y: 2.9828, z: 0}
+    m_Extent: {x: 2.0826, y: 2.4344, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -81870,8 +81871,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.7392, y: -0.88759995, z: 0}
-    m_Extent: {x: 1.4599, y: 1.4747, z: 0}
+    m_Center: {x: 0.7450501, y: -0.89119995, z: 0}
+    m_Extent: {x: 1.46235, y: 1.469, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -82975,8 +82976,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 48.92705, y: -1.8255999, z: 0}
-    m_Extent: {x: 50.096752, y: 6.3687, z: 0}
+    m_Center: {x: 48.93565, y: -1.8229, z: 0}
+    m_Extent: {x: 50.101048, y: 6.3709, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
