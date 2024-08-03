@@ -29,9 +29,6 @@ public class PlayerCombat : MonoBehaviour
         animator.SetTrigger("Attack");
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-        
-
-        
 
         foreach (Collider2D enemy in hitEnemies)
         {
@@ -50,21 +47,11 @@ public class PlayerCombat : MonoBehaviour
         Collider2D bossHealthCollider = Physics2D.OverlapCircle(attackPoint.position, attackRange, LayerMask.GetMask("Boss"));
         if (bossHealthCollider != null)
         {
-            Debug.Log("Boss hit detected");
             BossHealth bossHealth = bossHealthCollider.GetComponent<BossHealth>();
             if (bossHealth != null)
             {
-                Debug.Log("BossHealth component found");
                 bossHealth.TakeDamage(bossAttackDamage);
             }
-            else
-            {
-                Debug.Log("BossHealth component not found");
-            }
-        }
-        else
-        {
-            Debug.Log("Boss not hit");
         }
     }
     

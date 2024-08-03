@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
@@ -13,7 +14,7 @@ public class CharacterMovement : MonoBehaviour
     // Movement speed variables
     public float moveSpeed = 0f;
     public float extraSpeedFromApple = 5f;
-    public float sprintMultiplier = 2f; // Sprint speed multiplier
+    public float sprintMultiplier = 2f; 
 
     // Jumping variables
     public float jumpForce;
@@ -37,6 +38,8 @@ public class CharacterMovement : MonoBehaviour
     public Animator animator;
     public bool isDoorTriggered;
     
+    // Player controller reference
+    private NewControls playerInput;
     #endregion
 
     #region Event Functions
@@ -53,6 +56,18 @@ public class CharacterMovement : MonoBehaviour
         {
             _instance = this;
         }
+
+        playerInput = new NewControls();
+    }
+
+    private void OnEnable()
+    { 
+        playerInput.Enable();
+    }
+
+    private void OnDisable()
+    {
+        playerInput.Disable();
     }
 
     // Called before the first frame update

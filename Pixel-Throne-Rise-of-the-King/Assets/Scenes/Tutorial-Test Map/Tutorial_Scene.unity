@@ -189,8 +189,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 4.4413, y: 2.97, z: 0}
-    m_Extent: {x: 2.0818, y: 2.4374, z: 0}
+    m_Center: {x: 4.4477, y: 2.97085, z: 0}
+    m_Extent: {x: 2.0826998, y: 2.42915, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1083,6 +1083,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 188866747}
     m_Modifications:
     - target: {fileID: 1612525177153198059, guid: f037960d392b1d244a7fc0a38881cae3, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612525177153198059, guid: f037960d392b1d244a7fc0a38881cae3, type: 3}
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1370366145}
@@ -1215,8 +1219,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 4.4497, y: 2.9828, z: 0}
-    m_Extent: {x: 2.0826, y: 2.4344, z: 0}
+    m_Center: {x: 4.4378996, y: 2.9712498, z: 0}
+    m_Extent: {x: 2.0844, y: 2.43625, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1589,6 +1593,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 188866747}
     m_Modifications:
     - target: {fileID: 1612525177153198059, guid: f037960d392b1d244a7fc0a38881cae3, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612525177153198059, guid: f037960d392b1d244a7fc0a38881cae3, type: 3}
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1370366145}
@@ -1852,6 +1860,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &731643330 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1928533784865913448, guid: e89a38064ebe0d548b30fa6bf77bfca0, type: 3}
+  m_PrefabInstance: {fileID: 1928533784358119963}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &757383564 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5215015261047176575, guid: f037960d392b1d244a7fc0a38881cae3, type: 3}
@@ -2106,6 +2119,10 @@ PrefabInstance:
     - target: {fileID: 4209491644955930743, guid: e5cf0fef03b509e4490c569bba858031, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209491644955930743, guid: e5cf0fef03b509e4490c569bba858031, type: 3}
+      propertyPath: maxHealth
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4209491644955930745, guid: e5cf0fef03b509e4490c569bba858031, type: 3}
       propertyPath: m_RootOrder
@@ -81871,8 +81888,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.7450501, y: -0.89119995, z: 0}
-    m_Extent: {x: 1.46235, y: 1.469, z: 0}
+    m_Center: {x: 0.7361001, y: -0.89594996, z: 0}
+    m_Extent: {x: 1.4585, y: 1.4733499, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -81896,6 +81913,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 188866747}
     m_Modifications:
+    - target: {fileID: 1612525177153198059, guid: f037960d392b1d244a7fc0a38881cae3, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1612525177153198059, guid: f037960d392b1d244a7fc0a38881cae3, type: 3}
       propertyPath: playerHealth
       value: 
@@ -82211,6 +82232,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 188866747}
     m_Modifications:
+    - target: {fileID: 1612525177153198059, guid: f037960d392b1d244a7fc0a38881cae3, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1612525177153198059, guid: f037960d392b1d244a7fc0a38881cae3, type: 3}
       propertyPath: playerHealth
       value: 
@@ -82976,8 +83001,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 48.93565, y: -1.8229, z: 0}
-    m_Extent: {x: 50.101048, y: 6.3709, z: 0}
+    m_Center: {x: 48.93395, y: -1.8306999, z: 0}
+    m_Extent: {x: 50.099552, y: 6.3693, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -83170,6 +83195,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1928533784865913453, guid: e89a38064ebe0d548b30fa6bf77bfca0, type: 3}
   m_PrefabInstance: {fileID: 1928533784358119963}
   m_PrefabAsset: {fileID: 0}
+--- !u!70 &1928533784358119968
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731643330}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00000011920929, y: 0}
+  m_Size: {x: 0.64, y: 0.68}
+  m_Direction: 0
 --- !u!1001 &2169968731955550403
 PrefabInstance:
   m_ObjectHideFlags: 0
