@@ -39,7 +39,7 @@ public class CharacterMovement : MonoBehaviour
     public bool isDoorTriggered;
     
     // Player controller reference
-    private NewControls playerInput;
+    
     #endregion
 
     #region Event Functions
@@ -56,19 +56,9 @@ public class CharacterMovement : MonoBehaviour
         {
             _instance = this;
         }
-
-        playerInput = new NewControls();
+        
     }
-
-    private void OnEnable()
-    { 
-        playerInput.Enable();
-    }
-
-    private void OnDisable()
-    {
-        playerInput.Disable();
-    }
+    
 
     // Called before the first frame update
     private void Start()
