@@ -3,7 +3,6 @@ using UnityEngine;
 public class StarAttack : StateMachineBehaviour
 {
     public float increasedSpeed = 5f;
-    public float attackRange = 3f; 
     private Boss starMiniboss;
     private Transform player;
     private Rigidbody2D rb;
@@ -18,19 +17,16 @@ public class StarAttack : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        starMiniboss.LookAtPlayer();
         Vector2 target = new Vector2(player.position.x, rb.position.y);
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, increasedSpeed * Time.fixedDeltaTime);
         rb.MovePosition(newPos);
+        animator.SetBool("Attack", true);
         
-        float distanceToPlayer = Vector2.Distance(rb.position, player.position);
-        if (distanceToPlayer <= attackRange)
-        {
-            animator.SetTrigger("Attack");
-        }
     }
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.ResetTrigger("Attack");
+        animator.SetBool("Attack", false);
     }
 }

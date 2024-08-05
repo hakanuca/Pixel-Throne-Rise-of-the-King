@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class BossHealth : MonoBehaviour
+public class StarHealth : MonoBehaviour
 {
     #region Variables/Reference
 
@@ -22,24 +22,11 @@ public class BossHealth : MonoBehaviour
     #endregion
 
     #region Self Functions
-
-    public void SetInvulnerable(bool state)
-    {
-        isInvulnerable = state;
-    }
-
-    public bool IsInvulnerable()
-    {
-        return isInvulnerable;
-    }
-
+    
     public void TakeDamage(int damage)
     {
-        if (isInvulnerable) return;
-
         currentHealth -= damage;
-        animator.SetTrigger("Glowing");
-
+        
         if (currentHealth <= 2 && currentHealth > 0)
         {
             GetComponent<Animator>().SetBool("Defense", true);

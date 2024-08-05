@@ -19,6 +19,7 @@ public class PlayerCombat : MonoBehaviour
             {
                 Attack();
                 AttackBoss();
+                AttackMiniBoss();
                 nextAttackTime = Time.time + 1f / attackRate;
             }
         }
@@ -51,6 +52,22 @@ public class PlayerCombat : MonoBehaviour
             if (bossHealth != null)
             {
                 bossHealth.TakeDamage(bossAttackDamage);
+                animator.SetTrigger("Hit");
+            }
+        }
+    }
+    
+    void AttackMiniBoss()
+    {
+        animator.SetTrigger("Attack");
+        Collider2D bossHealthCollider = Physics2D.OverlapCircle(attackPoint.position, attackRange, LayerMask.GetMask("Boss"));
+        if (bossHealthCollider != null)
+        {
+           StarHealth starHealth = bossHealthCollider.GetComponent<StarHealth>();
+            if (starHealth != null)
+            {
+                starHealth.TakeDamage(bossAttackDamage);
+                animator.SetTrigger("Hit");
             }
         }
     }
