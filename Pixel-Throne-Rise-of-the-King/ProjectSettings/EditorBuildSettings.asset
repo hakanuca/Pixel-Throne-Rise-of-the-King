@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/UI/Main_Menu.unity
     guid: 57a3dec4ac6e95548803f3ab0912dd10
   - enabled: 1
-    path: Assets/Scenes/UI/Story_Scene.unity
+    path: Assets/Scenes/UI/King_Name_Scene.unity
     guid: 45a9448b3a3b6d64fa46c67887188ce6
   - enabled: 1
     path: Assets/Scenes/Tutorial-Test Map/Tutorial_Scene.unity
