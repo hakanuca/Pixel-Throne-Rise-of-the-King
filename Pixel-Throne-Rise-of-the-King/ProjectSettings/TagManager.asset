@@ -10,6 +10,7 @@ TagManager:
   - attackpoint
   - Audio
   - GM
+  - Collectible
   layers:
   - Default
   - TransparentFX

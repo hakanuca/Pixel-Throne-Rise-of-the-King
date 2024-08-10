@@ -13,8 +13,7 @@ public class HealthBuff : MonoBehaviour
     if (collision.tag == "Player")
     {
       collision.GetComponent<Health>().AddHealth(addHealth);
-      gameObject.SetActive(false);
-
+      Destroy(gameObject);
     }
   }
 
