@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1.3
-  playerHealth: {fileID: 8745513318249212143, guid: 0fda6c094069eab41bdacbfe7ddd82b4, type: 3}
+  playerHealth: {fileID: 0}
 --- !u!114 &4209491644955930743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4209491644955930740}
-  maxHealth: 100
+  maxHealth: 3
   pointA: {fileID: 0}
   pointB: {fileID: 0}
   speed: 2

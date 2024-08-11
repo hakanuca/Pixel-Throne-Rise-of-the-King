@@ -1,5 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+// This script should be asssigned on king.
+// For using the ladder function, the scene should have a game object with tagged name "ladder" and also it should has a collider with "is triggered" on.
 using UnityEngine;
 
 public class LadderMovement : MonoBehaviour

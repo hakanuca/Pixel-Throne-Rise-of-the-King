@@ -8,6 +8,8 @@ public class PatrollingEnemy : Enemy
     private Vector3 nextPosition;
     public float damage = 1.3f;
 
+    private bool movingToPointB = true; // Track the current direction
+
     protected override void Start()
     {
         base.Start();
@@ -21,7 +23,19 @@ public class PatrollingEnemy : Enemy
     {
         if (Vector3.Distance(transform.position, nextPosition) < 0.1f)
         {
-            nextPosition = nextPosition == pointA.position ? pointB.position : pointA.position;
+            // Flip the direction
+            if (movingToPointB)
+            {
+                nextPosition = pointA.position;
+                Flip();
+                movingToPointB = false;
+            }
+            else
+            {
+                nextPosition = pointB.position;
+                Flip();
+                movingToPointB = true;
+            }
         }
         MoveTowardsNextPosition();
     }
@@ -38,5 +52,14 @@ public class PatrollingEnemy : Enemy
             // Assuming there's a Health component on the player that has a TakeDamage method.
             collision.gameObject.GetComponent<Health>().TakeDamage(damage);
         }
+    }
+
+    // Method to flip the enemy's scale
+    void Flip()
+    {
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1; // Flip the x scale to make it face the other direction
+        transform.localScale = theScale;
+        // for character scale x to -x position
     }
 }
