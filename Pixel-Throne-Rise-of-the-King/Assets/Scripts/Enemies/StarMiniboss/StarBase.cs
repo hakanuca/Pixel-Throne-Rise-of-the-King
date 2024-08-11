@@ -3,12 +3,13 @@ using UnityEngine;
 
 public class StarBase : MonoBehaviour
 {
-    public Animator animator;
-    public float cooldown = 3f;
+    [SerializeField] private Animator animator;
+    [SerializeField] private float cooldown = 3f;
     private Boss boss;
     private Transform player;
-    public LayerMask playerLayer;
+    [SerializeField] private LayerMask playerLayer;
     private float lastAttackTime;
+    [SerializeField] private float attackSpeed = 20f;
 
     private void Start()
     {
@@ -29,19 +30,26 @@ public class StarBase : MonoBehaviour
     {
         animator.SetBool("Attack", true);
 
-        Vector3 targetPosition = new Vector3(player.position.x, transform.position.y, transform.position.z);
-        float attackSpeed = 20f;
+        Vector3 direction = (player.position - transform.position).normalized;
+        Vector3 targetPosition = player.position + direction * 5f;
+
         StartCoroutine(MoveToPosition(targetPosition, attackSpeed));
-        
+
         lastAttackTime = Time.time;
     }
 
     private IEnumerator MoveToPosition(Vector3 target, float speed)
     {
-        while (Vector3.Distance(transform.position, target) > 0.1f)
+        Vector3 startPosition = transform.position;
+        Vector3 targetPosition = new Vector3(target.x, startPosition.y, startPosition.z);
+
+        while (Vector3.Distance(transform.position, targetPosition) > 0.1f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
             yield return null;
         }
+
+        yield return new WaitForSeconds(3f);
+        Attack();
     }
 }

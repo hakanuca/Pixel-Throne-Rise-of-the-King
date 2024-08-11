@@ -8,16 +8,23 @@ public class BossWeapon : MonoBehaviour
     public GameObject laserPrefab;
     public float minDistance = 20f;
     public float cooldown = 3f; 
-    private float lastAttackTime;
-    private Boss boss;
-    private Transform player;
+    float lastAttackTime;
+    Boss boss;
+    Transform player;
     public LayerMask playerLayer;
+
+    //laser
+    public Transform laserOrigin;
+    public float gunRange = 10f;
+    public float laserDuration = 0.5f;
+    LineRenderer laserLine;
 
     private void Start()
     {
         boss = GetComponent<Boss>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         lastAttackTime = -cooldown;
+        laserLine = GetComponent<LineRenderer>();
     }
 
     private void Update()
@@ -37,25 +44,20 @@ public class BossWeapon : MonoBehaviour
 
     public void LaserAttack()
     {
-        if (Time.time - lastAttackTime < cooldown) return; 
+        if (Time.time - lastAttackTime < cooldown) return;
 
-        Transform bossTransform = transform;
-        Boss boss = bossTransform.GetComponent<Boss>();
-        Transform playerTransform = boss.player;
+        Vector3 direction = (player.position - laserOrigin.position).normalized;
+        RaycastHit2D hit = Physics2D.Raycast(laserOrigin.position, direction, gunRange, playerLayer);
 
-        Vector3 direction = (playerTransform.position - bossTransform.position).normalized;
-        Vector3 rayOrigin = bossTransform.position + new Vector3(0, 1, 0); 
-        RaycastHit2D hit = Physics2D.Raycast(rayOrigin, direction, Mathf.Infinity, playerLayer); 
         if (hit.collider != null)
         {
-            GameObject laser = Instantiate(laserPrefab, hit.point, Quaternion.identity);
-            laser.transform.position = hit.point;
+            GameObject laser = Instantiate(laserPrefab, laserOrigin.position, Quaternion.identity);
             laser.transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
-            Destroy(laser, 3f); 
+            Destroy(laser, laserDuration);
         }
 
         animator.SetTrigger("Laser");
-        lastAttackTime = Time.time; 
+        lastAttackTime = Time.time;
     }
 
     #region Gizmos
@@ -83,5 +85,4 @@ public class BossWeapon : MonoBehaviour
     }
 
     #endregion
-    
 }
