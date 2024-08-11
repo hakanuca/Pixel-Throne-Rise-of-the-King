@@ -11,6 +11,7 @@ TagManager:
   - Audio
   - GM
   - Collectible
+  - Key
   layers:
   - Default
   - TransparentFX
