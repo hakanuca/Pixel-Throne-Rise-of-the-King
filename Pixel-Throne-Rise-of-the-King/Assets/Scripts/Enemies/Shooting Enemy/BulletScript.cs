@@ -21,7 +21,7 @@ public class BulletScript : MonoBehaviour
         rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
 
         float rotation = Mathf.Atan2(-direction.y, -direction.x);
-        transform.rotation = Quaternion.Euler(0, 0, rotation);
+        transform.rotation = Quaternion.Euler(0, 0, rotation + 90);
     }
 
     // Update is called once per frame
