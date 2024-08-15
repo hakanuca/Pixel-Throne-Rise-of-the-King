@@ -5,7 +5,7 @@ public class PlayerCombat : MonoBehaviour
     public Animator animator;
     public Transform attackPoint;
     public float attackRange = 0.5f;
-    public int attackDamage = 20;
+    public float attackDamage = 1f;
     public int bossAttackDamage = 2;
     public LayerMask enemyLayers;
     public float attackRate = 2f;
@@ -27,6 +27,7 @@ public class PlayerCombat : MonoBehaviour
     
     void Attack()
     {
+        
         animator.SetTrigger("Attack");
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
@@ -35,10 +36,10 @@ public class PlayerCombat : MonoBehaviour
         {
             CinemachineShake.Instance.ShakeCamera(5f, .1f);
             Enemy enemyComponent = enemy.GetComponent<Enemy>();
-            if (enemyComponent != null)
-            {
-                enemyComponent.TakeDamage(attackDamage);
-            }
+            
+                
+            enemyComponent.TakeDamage(attackDamage);
+            
         }
     }
 

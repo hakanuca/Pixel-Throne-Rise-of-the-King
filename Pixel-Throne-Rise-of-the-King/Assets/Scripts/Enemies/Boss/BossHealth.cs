@@ -6,8 +6,8 @@ public class BossHealth : MonoBehaviour
     #region Variables/Reference
 
     public Animator animator;
-    public int maxHealth = 4;
-    public int currentHealth;
+    public float maxHealth = 4f;
+    public float currentHealth;
     private bool isInvulnerable = false;
 
     #endregion

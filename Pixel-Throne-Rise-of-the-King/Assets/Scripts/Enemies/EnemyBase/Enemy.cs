@@ -3,16 +3,17 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public Animator animator;
-    public int maxHealth = 100;
-    protected int currentHealth;
+    public float maxHealth = 100f;
+    public float currentHealth;
 
     protected virtual void Start()
     {
         currentHealth = maxHealth;
     }
 
-    public virtual void TakeDamage(int damage)
+    public virtual void TakeDamage(float damage)
     {
+        Debug.Log("TakeDamage");
         currentHealth -= damage;
         animator.SetTrigger("Hurt");
 

@@ -6,8 +6,6 @@ public class PatrollingEnemy : Enemy
     public Transform pointB;
     public float speed = 2f;
     private Vector3 nextPosition;
-    public float damage = 1.3f;
-
     private bool movingToPointB = true; // Track the current direction
 
     protected override void Start()
@@ -45,15 +43,6 @@ public class PatrollingEnemy : Enemy
         transform.position = Vector3.MoveTowards(transform.position, nextPosition, speed * Time.deltaTime);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            // Assuming there's a Health component on the player that has a TakeDamage method.
-            collision.gameObject.GetComponent<Health>().TakeDamage(damage);
-        }
-    }
-
     // Method to flip the enemy's scale
     void Flip()
     {
@@ -61,5 +50,10 @@ public class PatrollingEnemy : Enemy
         theScale.x *= -1; // Flip the x scale to make it face the other direction
         transform.localScale = theScale;
         // for character scale x to -x position
+    }
+
+    public override void TakeDamage(float damage)
+    {
+        base.TakeDamage(damage);
     }
 }
