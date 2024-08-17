@@ -2,7 +2,6 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class Health : MonoBehaviour
 {
     [SerializeField] private float startingHealth;
@@ -13,21 +12,26 @@ public class Health : MonoBehaviour
     AudioManager audioManager;
     private bool IsAvailable = true;
     private int CooldownDuration = 1;
+    [SerializeField] private bool isInvincible;
 
     private void Awake()
     {
         currentHealth = startingHealth;
         //audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        isInvincible = false;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            isInvincible = !isInvincible;
+        }
     }
 
     public void TakeDamage(float _damage)
     {
-        if (GetComponent<DodgeRoll>().isRolling)
-        {
-            return;
-        }
-        
-        if (IsAvailable == false)
+        if (GetComponent<DodgeRoll>().isRolling || IsAvailable == false || isInvincible)
         {
             return;
         }
@@ -48,16 +52,16 @@ public class Health : MonoBehaviour
                 GetComponent<PlayerCombat>().enabled = false;
                 dead = true;
                 //StartCoroutine(ReloadSceneWithCooldown(3f));
-
             }
         }
-        
         StartCoroutine(StartCooldown());
     }
+
     public void AddHealth(float _value)
     {
         currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
     }
+
     private IEnumerator ReloadSceneWithCooldown(float cooldownTime)
     {
         cooldownActive = true;
@@ -69,9 +73,7 @@ public class Health : MonoBehaviour
     public IEnumerator StartCooldown()
     {
         IsAvailable = false;
-
         yield return new WaitForSeconds(CooldownDuration);
-
         IsAvailable = true;
     }
 }
