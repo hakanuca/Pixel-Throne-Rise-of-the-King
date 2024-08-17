@@ -189,8 +189,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 4.4418, y: 2.97535, z: 0}
-    m_Extent: {x: 2.0805998, y: 2.43285, z: 0}
+    m_Center: {x: 4.4442, y: 2.97555, z: 0}
+    m_Extent: {x: 2.0882, y: 2.43905, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1230,8 +1230,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 4.4534, y: 2.9675, z: 0}
-    m_Extent: {x: 2.0814, y: 2.4301999, z: 0}
+    m_Center: {x: 4.44405, y: 2.9782, z: 0}
+    m_Extent: {x: 2.07555, y: 2.4329, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -82163,8 +82163,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.73330003, y: -0.8864, z: 0}
-    m_Extent: {x: 1.4588001, y: 1.4758, z: 0}
+    m_Center: {x: 0.73605007, y: -0.89204997, z: 0}
+    m_Extent: {x: 1.46435, y: 1.4790499, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -83651,8 +83651,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 48.9351, y: -1.82815, z: 0}
-    m_Extent: {x: 50.104298, y: 6.3671503, z: 0}
+    m_Center: {x: 48.93625, y: -1.8204, z: 0}
+    m_Extent: {x: 50.10675, y: 6.3686, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -84184,3 +84184,60 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3474890879503197517, guid: 14c1390e2e9d0c941a037a0c5d3a9c42, type: 3}
   m_PrefabInstance: {fileID: 4804589107096293298}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8873166718542708411
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6556954063034739709, guid: e9bf1eebd97747845bcfb8af1a8cff95, type: 3}
+      propertyPath: m_Name
+      value: CageLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174812217532238688, guid: e9bf1eebd97747845bcfb8af1a8cff95, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174812217532238688, guid: e9bf1eebd97747845bcfb8af1a8cff95, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 79.57855
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174812217532238688, guid: e9bf1eebd97747845bcfb8af1a8cff95, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174812217532238688, guid: e9bf1eebd97747845bcfb8af1a8cff95, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.77195007
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174812217532238688, guid: e9bf1eebd97747845bcfb8af1a8cff95, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174812217532238688, guid: e9bf1eebd97747845bcfb8af1a8cff95, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174812217532238688, guid: e9bf1eebd97747845bcfb8af1a8cff95, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174812217532238688, guid: e9bf1eebd97747845bcfb8af1a8cff95, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174812217532238688, guid: e9bf1eebd97747845bcfb8af1a8cff95, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174812217532238688, guid: e9bf1eebd97747845bcfb8af1a8cff95, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174812217532238688, guid: e9bf1eebd97747845bcfb8af1a8cff95, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e9bf1eebd97747845bcfb8af1a8cff95, type: 3}
