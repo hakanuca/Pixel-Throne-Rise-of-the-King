@@ -9,6 +9,8 @@ public class BossHealth : MonoBehaviour
     public float maxHealth = 4f;
     public float currentHealth;
     private bool isInvulnerable = false;
+    [SerializeField] private EnemyHealthbar enemyHealthbar;
+
 
     #endregion
 
@@ -33,13 +35,13 @@ public class BossHealth : MonoBehaviour
         return isInvulnerable;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         if (isInvulnerable) return;
 
         currentHealth -= damage;
         animator.SetTrigger("Glowing");
-
+        enemyHealthbar.UpdateHealthbar();
         if (currentHealth <= 2 && currentHealth > 0)
         {
             GetComponent<Animator>().SetBool("Defense", true);

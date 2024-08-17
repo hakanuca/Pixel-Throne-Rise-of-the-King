@@ -6,8 +6,8 @@ public class StarHealth : MonoBehaviour
     #region Variables/Reference
 
     public Animator animator;
-    public int maxHealth = 4;
-    public int currentHealth;
+    public float maxHealth = 4f;
+    public float currentHealth;
     private bool isInvulnerable = false;
 
     #endregion
@@ -23,7 +23,7 @@ public class StarHealth : MonoBehaviour
 
     #region Self Functions
     
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         currentHealth -= damage;
         

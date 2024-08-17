@@ -6,7 +6,7 @@ public class PlayerCombat : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public float attackDamage = 1f;
-    public int bossAttackDamage = 2;
+    public float bossAttackDamage = 2f;
     public LayerMask enemyLayers;
     public float attackRate = 2f;
     private float nextAttackTime = 0f;
@@ -37,7 +37,6 @@ public class PlayerCombat : MonoBehaviour
             CinemachineShake.Instance.ShakeCamera(5f, .1f);
             Enemy enemyComponent = enemy.GetComponent<Enemy>();
             
-                
             enemyComponent.TakeDamage(attackDamage);
             
         }

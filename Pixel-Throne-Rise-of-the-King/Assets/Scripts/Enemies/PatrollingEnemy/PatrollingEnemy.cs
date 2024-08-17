@@ -6,7 +6,7 @@ public class PatrollingEnemy : Enemy
     public Transform pointB;
     public float speed = 2f;
     private Vector3 nextPosition;
-    private bool movingToPointB = true; // Track the current direction
+    private bool movingToPointB = true; 
 
     protected override void Start()
     {
