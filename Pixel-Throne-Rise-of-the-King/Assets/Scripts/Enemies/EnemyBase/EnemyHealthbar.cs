@@ -4,15 +4,23 @@ using UnityEngine.UI;
 public class EnemyHealthbar : MonoBehaviour
 {
     [SerializeField] private Slider healthBar;
+    private Enemy enemy;
 
-    public void SetMaxHealth(float maxHealth)
+    public void Initialize(Enemy enemy)
     {
-        healthBar.maxValue = maxHealth;
-        healthBar.value = maxHealth;
+        this.enemy = enemy;
+        SetMaxHealth();
     }
 
-    public void UpdateHealthbar(float currentHealth)
+    public void SetMaxHealth()
     {
-        healthBar.value = currentHealth;
+        healthBar.maxValue = enemy.maxHealth;
+        healthBar.value = enemy.currentHealth;
+    }
+
+    public void UpdateHealthbar()
+    {
+        healthBar.value = enemy.currentHealth;
+        healthBar.transform.rotation = Quaternion.Euler (0.0f, 0.0f, gameObject.transform.rotation.z * -1.0f);
     }
 }

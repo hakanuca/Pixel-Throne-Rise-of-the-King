@@ -3,20 +3,22 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public Animator animator;
-    public float maxHealth = 100f;
+    public float maxHealth = 1f;
     public float currentHealth;
+    [SerializeField] private EnemyHealthbar enemyHealthbar;
 
     protected virtual void Start()
     {
         currentHealth = maxHealth;
+        enemyHealthbar.Initialize(this);
     }
 
     public virtual void TakeDamage(float damage)
     {
-        Debug.Log("TakeDamage");
         currentHealth -= damage;
         animator.SetTrigger("Hurt");
-
+        enemyHealthbar.UpdateHealthbar();
+        
         if(currentHealth <= 0)
         {
             Die();
@@ -28,6 +30,6 @@ public class Enemy : MonoBehaviour
         animator.SetBool("IsDead", true);
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
-        Destroy(this.gameObject,3f);
+        Destroy(this.gameObject, 3f);
     }
 }

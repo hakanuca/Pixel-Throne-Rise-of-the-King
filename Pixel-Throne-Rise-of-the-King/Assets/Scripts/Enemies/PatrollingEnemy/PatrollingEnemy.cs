@@ -46,10 +46,18 @@ public class PatrollingEnemy : Enemy
     // Method to flip the enemy's scale
     void Flip()
     {
+        // Flip the enemy's scale
         Vector3 theScale = transform.localScale;
-        theScale.x *= -1; // Flip the x scale to make it face the other direction
+        theScale.x *= -1;
         transform.localScale = theScale;
-        // for character scale x to -x position
+
+        // Flip the scale of all child objects
+        foreach (Transform child in transform)
+        {
+            Vector3 childScale = child.localScale;
+            childScale.x *= -1;
+            child.localScale = childScale;
+        }
     }
 
     public override void TakeDamage(float damage)
