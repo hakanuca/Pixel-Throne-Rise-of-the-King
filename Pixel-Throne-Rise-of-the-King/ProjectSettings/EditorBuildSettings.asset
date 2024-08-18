@@ -20,4 +20,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UI/EndGame_Scene.unity
     guid: 95ab8752e5d091a4fbf4031704144430
+  - enabled: 1
+    path: Assets/Scenes/Tutorial-Test Map/Test_Scene.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/UI/IntroScene.unity
+    guid: 7b889c017889c384e90ee5fdcd337a24
+  - enabled: 1
+    path: Assets/Scenes/UI/Story_Scene.unity
+    guid: c7a4bec699e45b44eb03f3dd56b0ddf7
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Cave_Big_Map.unity
+    guid: d88ca7e62b226874e8ea379d9b15b53e
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Final_Fight_Map.unity
+    guid: a96e7277a9481894ebddc75fcdd34710
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Final_Map.unity
+    guid: 0621a108b7dae794ebf1f454c7f1bfc9
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Infinity_Map.unity
+    guid: f8d49f3433d84b04eabe64da90490a05
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Kingdom_Map.unity
+    guid: c3710b55224496a48a692f1c70e3bf31
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Kingdom_Short_Map.unity
+    guid: b89fe1ffc9a4de04e8520d87fee185f0
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Skull_Map.unity
+    guid: 45b885ac3fdfba641a87f421f5a492a9
   m_configObjects: {}
