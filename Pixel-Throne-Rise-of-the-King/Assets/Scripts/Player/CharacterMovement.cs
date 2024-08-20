@@ -1,53 +1,38 @@
-using System;
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    
     #region Singleton
-    // Singleton instance for easy access from other scripts
     private static CharacterMovement _instance;
     public static CharacterMovement Instance { get { return _instance; } }
     #endregion
-    
+
     #region Variables
-    // Movement speed variables
     public float moveSpeed = 0f;
     public float extraSpeedFromApple = 5f;
-    public float sprintMultiplier = 2f; 
-
-    // Jumping variables
+    public float sprintMultiplier = 2f;
     public float jumpForce;
     public float extraJumpFromApple;
+    public float dashSpeed = 20f;
+    public float dashDuration = 0.2f;
 
-    // Rigidbody component for physics interactions
     [SerializeField] private Rigidbody2D rb;
-
-    // Jumping control variables
     private bool isGrounded;
     private string GROUND_TAG = "Ground";
-
-    public Vector2 direction;
-    public GameObject[] sides;
-
-    // Power-up status variables
     private bool extraSpeedActive = false;
     private bool extraJumpActive = false;
-
-    // Animator component for character animations
     public Animator animator;
-    public bool isDoorTriggered;
+    public bool isDashing { get; private set; } = false;
+    private float dashTime;
+    private Collider2D characterCollider;
     
-    // Player controller reference
-    
+    public int playerLayer { get; set; }
+    public int bossLayer { get; set; }
     #endregion
 
     #region Event Functions
-
-    // Called when the script instance is being loaded
     private void Awake()
     {
-        // Ensure only one instance of the class exists
         if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
@@ -56,31 +41,42 @@ public class CharacterMovement : MonoBehaviour
         {
             _instance = this;
         }
-        
+        playerLayer = LayerMask.NameToLayer("Player");
+        bossLayer = LayerMask.NameToLayer("Boss");
     }
+
     
 
-    // Called before the first frame update
+
     private void Start()
     {
-        // Get the Rigidbody component attached to the character
         rb = GetComponent<Rigidbody2D>();
+        characterCollider = GetComponent<Collider2D>();
+
     }
 
-    // Called once per frame
     private void Update()
     {
-        Jump();
-        Move();
+        if (isDashing)
+        {
+            Dash();
+        }
+        else
+        {
+            Jump();
+            Move();
+            if (Input.GetKeyDown(KeyCode.LeftControl))
+            {
+                StartDash();
+            }
+        }
     }
-
     #endregion
 
     #region Movement Functions
-
     private void Jump()
     {
-        if(Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             animator.SetBool("IsJumping", true);
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -90,24 +86,17 @@ public class CharacterMovement : MonoBehaviour
 
     private void Move()
     {
-        // Read input for horizontal movement
         float horizontalInput = Input.GetAxis("Horizontal");
-
-        // Calculate current movement speed, considering power-up status and sprinting
         float currentMoveSpeed = extraSpeedActive ? moveSpeed + extraSpeedFromApple : moveSpeed;
         if (Input.GetKey(KeyCode.LeftShift))
         {
             currentMoveSpeed *= sprintMultiplier;
         }
 
-        // Apply horizontal movement to the character
         Vector2 movement = new Vector2(horizontalInput * currentMoveSpeed, rb.velocity.y);
         rb.velocity = movement;
-
-        // Update animator parameter for character speed
         animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
 
-        // Flip character sprite based on movement direction
         if (horizontalInput < 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
@@ -118,13 +107,28 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
+    private void StartDash()
+    {
+        isDashing = true;
+        dashTime = Time.time + dashDuration;
+        rb.velocity = new Vector2(transform.localScale.x * dashSpeed, 0);
+        Physics2D.IgnoreLayerCollision(playerLayer, bossLayer, true);
+    }
+
+    private void Dash()
+    {
+        if (Time.time >= dashTime)
+        {
+            isDashing = false;
+            
+        }
+    }
     #endregion
 
     #region Collision Functions
-
     private void OnCollisionEnter2D(Collision2D collision2D)
     {
-        if(collision2D.gameObject.CompareTag(GROUND_TAG))
+        if (collision2D.gameObject.CompareTag(GROUND_TAG))
         {
             isGrounded = true;
         }
@@ -134,22 +138,17 @@ public class CharacterMovement : MonoBehaviour
     {
         if (collision.gameObject.name == "PotionJump")
         {
-            extraJumpActive = true; 
-            jumpForce = jumpForce + extraJumpFromApple; 
+            extraJumpActive = true;
+            jumpForce = jumpForce + extraJumpFromApple;
             Destroy(collision.gameObject);
         }
     }
-
     #endregion
 
     #region Animation Functions
-
     public void PlayAnimation()
     {
         animator.SetTrigger("IsDoorTriggered");
     }
-
     #endregion
-    
 }
-

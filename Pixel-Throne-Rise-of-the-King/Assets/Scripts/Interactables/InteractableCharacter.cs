@@ -2,11 +2,21 @@ using UnityEngine;
 
 public class InteractableCharacter : IInteractable
 {
-    protected virtual void OnTriggerEnter2D(Collider2D other)
+    private bool playerInRange = false;
+
+    private void Update()
     {
-        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+        if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
             Interact();
+        }
+    }
+
+    protected virtual void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = true;
         }
     }
 
@@ -14,9 +24,11 @@ public class InteractableCharacter : IInteractable
     {
         if (other.CompareTag("Player"))
         {
+            playerInRange = false;
             CancelInteract();
         }
     }
+
     protected override void Interact()
     {
         base.Interact();

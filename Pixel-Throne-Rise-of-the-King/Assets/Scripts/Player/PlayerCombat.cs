@@ -24,7 +24,10 @@ public class PlayerCombat : MonoBehaviour
             }
         }
     }
-    
+    public LayerMask GetEnemyLayers()
+    {
+        return enemyLayers;
+    }
     void Attack()
     {
         

@@ -31,7 +31,7 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float _damage)
     {
-        if (GetComponent<DodgeRoll>().isRolling || IsAvailable == false || isInvincible)
+        if (IsAvailable == false || isInvincible)
         {
             return;
         }

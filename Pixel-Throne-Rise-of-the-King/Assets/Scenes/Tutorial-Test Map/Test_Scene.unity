@@ -1580,7 +1580,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!114 &1305645969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12488,6 +12488,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937e0a6d437813849bfefbf3b2fc9ef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1760236083 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8745513318249212134, guid: 0fda6c094069eab41bdacbfe7ddd82b4, type: 3}
+  m_PrefabInstance: {fileID: 8745513316498684615}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db569c0e0c43a6a4dbb41316fc436ad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1786780360
 GameObject:
   m_ObjectHideFlags: 0
@@ -12941,6 +12952,22 @@ PrefabInstance:
       propertyPath: jumpForce
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8745513318249212131, guid: 0fda6c094069eab41bdacbfe7ddd82b4, type: 3}
+      propertyPath: dashDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8745513318249212131, guid: 0fda6c094069eab41bdacbfe7ddd82b4, type: 3}
+      propertyPath: playerCombat
+      value: 
+      objectReference: {fileID: 1760236083}
+    - target: {fileID: 8745513318249212131, guid: 0fda6c094069eab41bdacbfe7ddd82b4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 8745513318249212131, guid: 0fda6c094069eab41bdacbfe7ddd82b4, type: 3}
+      propertyPath: enemyLayerMask.m_Bits
+      value: 1088
+      objectReference: {fileID: 0}
     - target: {fileID: 8745513318249212134, guid: 0fda6c094069eab41bdacbfe7ddd82b4, type: 3}
       propertyPath: attackDamage
       value: 0.35
@@ -12949,5 +12976,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8745513318249212138, guid: 0fda6c094069eab41bdacbfe7ddd82b4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0fda6c094069eab41bdacbfe7ddd82b4, type: 3}

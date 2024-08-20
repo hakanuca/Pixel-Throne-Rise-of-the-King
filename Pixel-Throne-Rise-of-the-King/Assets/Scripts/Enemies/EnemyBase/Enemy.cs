@@ -15,11 +15,13 @@ public class Enemy : MonoBehaviour
 
     public virtual void TakeDamage(float damage)
     {
+        if (CharacterMovement.Instance.isDashing) return;
+
         currentHealth -= damage;
         animator.SetTrigger("Hurt");
         enemyHealthbar.UpdateHealthbar();
-        
-        if(currentHealth <= 0)
+
+        if (currentHealth <= 0)
         {
             Die();
         }
