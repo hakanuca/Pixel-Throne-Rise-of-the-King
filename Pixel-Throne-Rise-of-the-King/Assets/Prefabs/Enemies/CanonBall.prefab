@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4496818378133910840}
   - component: {fileID: 4496818378133910838}
   m_Layer: 7
-  m_Name: Cannon Left
+  m_Name: CanonBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
