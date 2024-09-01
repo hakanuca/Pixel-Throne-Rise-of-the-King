@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5535725541059917663}
   - component: {fileID: 1612525177153198059}
   m_Layer: 0
-  m_Name: Fire
+  m_Name: CanonFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 30
+  m_SortingOrder: 29
   m_Sprite: {fileID: -1465032628, guid: bb8183326332d344b9974b4790b7a33b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
