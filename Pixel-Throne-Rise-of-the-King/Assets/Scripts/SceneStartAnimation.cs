@@ -6,35 +6,42 @@ public class SceneStartAnimation : MonoBehaviour
 {
     [SerializeField] private GameObject[] enemies;
     [SerializeField] private GameObject[] keys;
-    [SerializeField] private GameObject player; 
-    [SerializeField] private Transform startPoint; 
-    [SerializeField] private Transform endPoint; 
+    [SerializeField] private GameObject player;
+    [SerializeField] private Transform startPoint;
+    [SerializeField] private Transform endPoint;
     [SerializeField] private CinemachineVirtualCamera cam;
     [SerializeField] private float startSize = 40f;
     [SerializeField] private float endSize = 7f;
     [SerializeField] private float duration = 2f;
+    [SerializeField] private float zoomSpeed = 1f; 
+    [SerializeField] private float transformSpeed = 1f; 
+
+    private bool hasAnimationPlayed = false; 
 
     private void Start()
     {
-        foreach (GameObject enemy in enemies)
+        if (!hasAnimationPlayed) 
         {
-            enemy.SetActive(false);
-        }
+            foreach (GameObject enemy in enemies)
+            {
+                enemy.SetActive(false);
+            }
 
-        foreach (GameObject key in keys)
-        {
-            key.SetActive(false);
-        }
+            foreach (GameObject key in keys)
+            {
+                key.SetActive(false);
+            }
 
-        if (player != null)
-        {
-            player.SetActive(false); 
-        }
+            if (player != null)
+            {
+                player.SetActive(false);
+            }
 
-        if (cam != null)
-        {
-            cam.m_Lens.OrthographicSize = startSize;
-            StartCoroutine(ChangeOrthoSize());
+            if (cam != null)
+            {
+                cam.m_Lens.OrthographicSize = startSize;
+                StartCoroutine(ChangeOrthoSize());
+            }
         }
     }
 
@@ -54,9 +61,9 @@ public class SceneStartAnimation : MonoBehaviour
         cam.m_Lens.OrthographicSize = endSize;
         if (player != null)
         {
-            player.transform.position = endPoint.position; 
+            player.transform.position = endPoint.position;
         }
-        OnAnimationEnd(); 
+        OnAnimationEnd();
     }
 
     public void OnAnimationEnd()
@@ -64,8 +71,9 @@ public class SceneStartAnimation : MonoBehaviour
         ActivateAllObjects();
         if (player != null)
         {
-            player.SetActive(true); 
+            player.SetActive(true);
         }
+        hasAnimationPlayed = true; 
     }
 
     public void ActivateAllObjects()
