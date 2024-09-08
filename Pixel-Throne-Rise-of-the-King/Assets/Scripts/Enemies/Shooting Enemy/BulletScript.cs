@@ -17,11 +17,18 @@ public class BulletScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
 
-        Vector3 direction = player.transform.position - transform.position;
-        rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
+        if (player != null)
+        {
+            Vector3 direction = player.transform.position - transform.position;
+            rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
 
-        float rotation = Mathf.Atan2(-direction.y, -direction.x);
-        transform.rotation = Quaternion.Euler(0, 0, rotation + 90);
+            float rotation = Mathf.Atan2(-direction.y, -direction.x);
+            transform.rotation = Quaternion.Euler(0, 0, rotation + 90);
+        }
+        else
+        {
+            Debug.LogError("Player not found");
+        }
     }
 
     // Update is called once per frame

@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     protected virtual void Start()
     {
         currentHealth = maxHealth;
-        enemyHealthbar.Initialize(this);
+        enemyHealthbar?.Initialize(this);
     }
 
     public virtual void TakeDamage(float damage)

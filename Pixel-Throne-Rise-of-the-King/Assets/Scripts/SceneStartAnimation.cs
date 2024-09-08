@@ -15,7 +15,7 @@ public class SceneStartAnimation : MonoBehaviour
     [SerializeField] private float duration = 2f;
     [SerializeField] private float zoomSpeed = 1f; 
     [SerializeField] private float transformSpeed = 1f; 
-
+    [SerializeField] private ParticleSystem playerInvisibleEffect;
     private bool hasAnimationPlayed = false; 
 
     private void Start()
@@ -71,7 +71,9 @@ public class SceneStartAnimation : MonoBehaviour
         ActivateAllObjects();
         if (player != null)
         {
+            playerInvisibleEffect.Play();
             player.SetActive(true);
+            
         }
         hasAnimationPlayed = true; 
     }

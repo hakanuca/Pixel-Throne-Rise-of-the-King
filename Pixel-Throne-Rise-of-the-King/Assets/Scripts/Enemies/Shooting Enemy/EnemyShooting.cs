@@ -19,18 +19,22 @@ public class EnemyShooting : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        float distance = Vector2.Distance(transform.position, player.transform.position);
-        Debug.Log(distance);
-        if (distance < 10)
+        if (player != null)
         {
-            timer += Time.deltaTime;
-            if (timer > 2)
+            float distance = Vector2.Distance(transform.position, player.transform.position);
+            if (distance < 10)
             {
-                timer = 0;
-                shoot();
-            }
+                timer += Time.deltaTime;
+                if (timer > 2)
+                {
+                    timer = 0;
+                    shoot();
+                }
 
+            }
         }
+        
+        
 
     }
     void shoot()
