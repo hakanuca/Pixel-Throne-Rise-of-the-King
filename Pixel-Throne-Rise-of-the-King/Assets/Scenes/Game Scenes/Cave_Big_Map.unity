@@ -847,8 +847,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.5229, y: -0.90875006, z: 0}
-    m_Extent: {x: 2.5147, y: 1.96035, z: 0}
+    m_Center: {x: 1.5257499, y: -0.91480005, z: 0}
+    m_Extent: {x: 2.51805, y: 1.9615, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -125693,8 +125693,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -13.920599, y: 0.7515001, z: 0}
-    m_Extent: {x: 40.5409, y: 16.167099, z: 0}
+    m_Center: {x: -13.9206505, y: 0.7512498, z: 0}
+    m_Extent: {x: 40.54745, y: 16.16885, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -127892,8 +127892,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.5178001, y: -0.90730006, z: 0}
-    m_Extent: {x: 2.5212, y: 1.9662001, z: 0}
+    m_Center: {x: 1.5181, y: -0.91345, z: 0}
+    m_Extent: {x: 2.5245001, y: 1.95575, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -128442,8 +128442,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 19.1744, y: -35.9138, z: 0}
-    m_Extent: {x: 67.3824, y: 41.1611, z: 0}
+    m_Center: {x: 19.170448, y: -35.9084, z: 0}
+    m_Extent: {x: 67.39505, y: 41.1587, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -128990,6 +128990,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8745513318249212131, guid: 0fda6c094069eab41bdacbfe7ddd82b4, type: 3}
+      propertyPath: dashEffect
+      value: 
+      objectReference: {fileID: 4682593329553039925, guid: 4322c23087126b84eb4dd87206a11be5, type: 3}
+    - target: {fileID: 8745513318249212131, guid: 0fda6c094069eab41bdacbfe7ddd82b4, type: 3}
+      propertyPath: dashAnimation
+      value: 
+      objectReference: {fileID: 4682593329553039924, guid: 4322c23087126b84eb4dd87206a11be5, type: 3}
     - target: {fileID: 8745513318249212135, guid: 0fda6c094069eab41bdacbfe7ddd82b4, type: 3}
       propertyPath: m_Name
       value: Player
