@@ -19,6 +19,7 @@ public class BossHealth : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
+        enemyHealthbar?.InitializeBoss(this);
     }
 
     #endregion
@@ -37,11 +38,12 @@ public class BossHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        Debug.Log("TakeDamage" + isInvulnerable);
         if (isInvulnerable) return;
-
+        Debug.Log("Inside Take Damage");
         currentHealth -= damage;
         animator.SetTrigger("Glowing");
-        enemyHealthbar.UpdateHealthbar();
+        enemyHealthbar.UpdateBossHealthbar();
         if (currentHealth <= 2 && currentHealth > 0)
         {
             GetComponent<Animator>().SetBool("Defense", true);

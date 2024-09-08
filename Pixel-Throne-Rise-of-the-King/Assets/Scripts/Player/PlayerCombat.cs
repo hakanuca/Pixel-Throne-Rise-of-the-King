@@ -15,7 +15,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (Time.time >= nextAttackTime)
         {
-            if(Input.GetKeyDown(KeyCode.K))
+            if (Input.GetKeyDown(KeyCode.K))
             {
                 Attack();
                 AttackBoss();
@@ -24,24 +24,22 @@ public class PlayerCombat : MonoBehaviour
             }
         }
     }
+
     public LayerMask GetEnemyLayers()
     {
         return enemyLayers;
     }
+
     void Attack()
     {
-        
         animator.SetTrigger("Attack");
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            CinemachineShake.Instance.ShakeCamera(5f, .1f);
             Enemy enemyComponent = enemy.GetComponent<Enemy>();
-            
-            enemyComponent.TakeDamage(attackDamage);
-            
+            enemyComponent?.TakeDamage(attackDamage);
         }
     }
 
@@ -59,14 +57,14 @@ public class PlayerCombat : MonoBehaviour
             }
         }
     }
-    
+
     void AttackMiniBoss()
     {
         animator.SetTrigger("Attack");
         Collider2D bossHealthCollider = Physics2D.OverlapCircle(attackPoint.position, attackRange, LayerMask.GetMask("Boss"));
         if (bossHealthCollider != null)
         {
-           StarHealth starHealth = bossHealthCollider.GetComponent<StarHealth>();
+            StarHealth starHealth = bossHealthCollider.GetComponent<StarHealth>();
             if (starHealth != null)
             {
                 starHealth.TakeDamage(bossAttackDamage);
@@ -74,16 +72,12 @@ public class PlayerCombat : MonoBehaviour
             }
         }
     }
-    
-    void OnDrawGizmosSelected() 
+
+    void OnDrawGizmosSelected()
     {
-        if(attackPoint == null)
+        if (attackPoint == null)
             return;
-        
-        Gizmos.DrawWireSphere(attackPoint.position,attackRange);
+
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }
-
-
-
-

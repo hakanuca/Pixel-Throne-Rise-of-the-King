@@ -25,14 +25,16 @@ public class CharacterMovement : MonoBehaviour
     public bool isDashing { get; private set; } = false;
     private float dashTime;
     private Collider2D characterCollider;
-    
+    [SerializeField] private Animator dashAnimation;
     public int playerLayer { get; set; }
     public int bossLayer { get; set; }
+    [SerializeField] private GameObject dashEffect;
     #endregion
 
     #region Event Functions
     private void Awake()
     {
+        
         if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
@@ -43,16 +45,13 @@ public class CharacterMovement : MonoBehaviour
         }
         playerLayer = LayerMask.NameToLayer("Player");
         bossLayer = LayerMask.NameToLayer("Boss");
+        dashEffect.SetActive(false);
     }
-
     
-
-
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         characterCollider = GetComponent<Collider2D>();
-
     }
 
     private void Update()
@@ -110,6 +109,8 @@ public class CharacterMovement : MonoBehaviour
     private void StartDash()
     {
         isDashing = true;
+        dashEffect.SetActive(true);
+        animator.SetTrigger("Dash");
         dashTime = Time.time + dashDuration;
         rb.velocity = new Vector2(transform.localScale.x * dashSpeed, 0);
         Physics2D.IgnoreLayerCollision(playerLayer, bossLayer, true);
