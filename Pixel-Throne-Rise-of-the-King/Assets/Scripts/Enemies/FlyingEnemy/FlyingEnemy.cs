@@ -2,36 +2,66 @@ using UnityEngine;
 
 public class FlyingEnemy : Enemy
 {
-    public GameObject player;
     public float speed;
     public int damage;
-    public float distanceBetween;
-    private float distance;
+
+    // Patrolling fields
+    public float patrolDistance = 5f;
+    private Vector3 originPosition;
+    private Vector3 nextPosition;
+    private bool movingRight = true;
 
     protected override void Start()
     {
         base.Start();
-        if (player == null)
-        {
-            player = GameObject.FindGameObjectWithTag("Player");
-        }
+
+        // Initialize patrolling positions
+        originPosition = transform.position;
+        nextPosition = originPosition + Vector3.right * patrolDistance;
     }
 
     void Update()
     {
-        distance = Vector2.Distance(transform.position, player.transform.position);
-        if (distance < distanceBetween)
-        {
-            Vector2 direction = (player.transform.position - transform.position).normalized;
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
-        }
+        Patrol();
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void Patrol()
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (Vector3.Distance(transform.position, nextPosition) < 0.1f)
         {
-            collision.gameObject.GetComponent<Health>().TakeDamage(damage);
+            if (movingRight)
+            {
+                nextPosition = originPosition + Vector3.left * patrolDistance;
+                Flip();
+                movingRight = false;
+            }
+            else
+            {
+                nextPosition = originPosition + Vector3.right * patrolDistance;
+                Flip();
+                movingRight = true;
+            }
+        }
+
+        MoveTowardsNextPosition();
+    }
+
+    void MoveTowardsNextPosition()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, nextPosition, speed * Time.deltaTime);
+    }
+
+    void Flip()
+    {
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+
+        foreach (Transform child in transform)
+        {
+            Vector3 childScale = child.localScale;
+            childScale.x *= -1;
+            child.localScale = childScale;
         }
     }
 
