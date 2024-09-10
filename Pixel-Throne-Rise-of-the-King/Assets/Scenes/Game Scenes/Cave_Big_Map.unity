@@ -858,8 +858,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.51285, y: -0.9189501, z: 0}
-    m_Extent: {x: 2.51885, y: 1.96965, z: 0}
+    m_Center: {x: 1.5189999, y: -0.9097499, z: 0}
+    m_Extent: {x: 2.5254998, y: 1.9595499, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -898,17 +898,21 @@ PrefabInstance:
       propertyPath: healthBarFill
       value: 
       objectReference: {fileID: 1025806328}
+    - target: {fileID: 4209491644955930743, guid: e5cf0fef03b509e4490c569bba858031, type: 3}
+      propertyPath: patrolDistance
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4209491644955930745, guid: e5cf0fef03b509e4490c569bba858031, type: 3}
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4209491644955930745, guid: e5cf0fef03b509e4490c569bba858031, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.651783
+      value: -17.84
       objectReference: {fileID: 0}
     - target: {fileID: 4209491644955930745, guid: e5cf0fef03b509e4490c569bba858031, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.0858269
+      value: -3.11
       objectReference: {fileID: 0}
     - target: {fileID: 4209491644955930745, guid: e5cf0fef03b509e4490c569bba858031, type: 3}
       propertyPath: m_LocalPosition.z
@@ -124361,17 +124365,21 @@ PrefabInstance:
       propertyPath: healthBarFill
       value: 
       objectReference: {fileID: 123909214}
+    - target: {fileID: 4209491644955930743, guid: e5cf0fef03b509e4490c569bba858031, type: 3}
+      propertyPath: patrolDistance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4209491644955930745, guid: e5cf0fef03b509e4490c569bba858031, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4209491644955930745, guid: e5cf0fef03b509e4490c569bba858031, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.8124313
+      value: 7.44
       objectReference: {fileID: 0}
     - target: {fileID: 4209491644955930745, guid: e5cf0fef03b509e4490c569bba858031, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -46.03016
+      value: -46.13
       objectReference: {fileID: 0}
     - target: {fileID: 4209491644955930745, guid: e5cf0fef03b509e4490c569bba858031, type: 3}
       propertyPath: m_LocalPosition.z
@@ -125722,8 +125730,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -13.91715, y: 0.7544999, z: 0}
-    m_Extent: {x: 40.54295, y: 16.1714, z: 0}
+    m_Center: {x: -13.932099, y: 0.75534964, z: 0}
+    m_Extent: {x: 40.542, y: 16.16775, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -127935,8 +127943,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.5228, y: -0.9086, z: 0}
-    m_Extent: {x: 2.5193, y: 1.9623, z: 0}
+    m_Center: {x: 1.5156999, y: -0.90615004, z: 0}
+    m_Extent: {x: 2.5196, y: 1.96295, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -128485,8 +128493,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 19.17025, y: -35.9171, z: 0}
-    m_Extent: {x: 67.38575, y: 41.159798, z: 0}
+    m_Center: {x: 19.165998, y: -35.906803, z: 0}
+    m_Extent: {x: 67.393, y: 41.1618, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -136742,6 +136750,10 @@ PrefabInstance:
       propertyPath: healthBarFill
       value: 
       objectReference: {fileID: 468451739}
+    - target: {fileID: 4209491644955930743, guid: e5cf0fef03b509e4490c569bba858031, type: 3}
+      propertyPath: patrolDistance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4209491644955930745, guid: e5cf0fef03b509e4490c569bba858031, type: 3}
       propertyPath: m_RootOrder
       value: 4
