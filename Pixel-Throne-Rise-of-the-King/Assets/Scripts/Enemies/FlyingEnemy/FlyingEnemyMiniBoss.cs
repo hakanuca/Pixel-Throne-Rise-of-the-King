@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class FlyingEnemyMiniBoss : Enemy
 {
@@ -10,7 +11,7 @@ public class FlyingEnemyMiniBoss : Enemy
 
     [SerializeField] private GameObject fireballPrefab; // Reference to the fireball prefab
     public float fireballSpeed;
-    public float fireballCooldown = 2f;
+    public float fireballCooldown = 3f; // Updated cooldown to 3 seconds
     private float lastFireballTime;
 
     protected override void Start()
@@ -32,17 +33,28 @@ public class FlyingEnemyMiniBoss : Enemy
 
             if (Time.time > lastFireballTime + fireballCooldown)
             {
-                ThrowFireball(direction);
+                ThrowFireball();
                 lastFireballTime = Time.time;
             }
         }
     }
 
-    void ThrowFireball(Vector2 direction)
+    void ThrowFireball()
     {
         GameObject fireball = Instantiate(fireballPrefab, transform.position, Quaternion.identity);
-        Rigidbody2D rb = fireball.GetComponent<Rigidbody2D>();
-        rb.velocity = direction * fireballSpeed;
+        StartCoroutine(FollowPlayer(fireball));
+        Destroy(fireball, 3f); // Destroy fireball after 3 seconds
+    }
+
+    IEnumerator FollowPlayer(GameObject fireball)
+    {
+        while (fireball != null)
+        {
+            Vector2 direction = (player.transform.position - fireball.transform.position).normalized;
+            Rigidbody2D rb = fireball.GetComponent<Rigidbody2D>();
+            rb.velocity = direction * fireballSpeed;
+            yield return null;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -51,10 +63,5 @@ public class FlyingEnemyMiniBoss : Enemy
         {
             collision.gameObject.GetComponent<Health>().TakeDamage(damage);
         }
-    }
-
-    public override void TakeDamage(float damage)
-    {
-        base.TakeDamage(damage);
     }
 }
