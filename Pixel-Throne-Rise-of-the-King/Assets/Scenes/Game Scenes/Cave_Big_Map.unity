@@ -858,8 +858,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.5121, y: -0.91485, z: 0}
-    m_Extent: {x: 2.5213, y: 1.95945, z: 0}
+    m_Center: {x: 1.51635, y: -0.9112, z: 0}
+    m_Extent: {x: 2.52365, y: 1.9591999, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -125730,8 +125730,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -13.9299, y: 0.7546997, z: 0}
-    m_Extent: {x: 40.5402, y: 16.1656, z: 0}
+    m_Center: {x: -13.928749, y: 0.75304985, z: 0}
+    m_Extent: {x: 40.53825, y: 16.16705, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -126863,6 +126863,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a20d50f9de4604e49a72ce3c65d3998d, type: 3}
+--- !u!1 &936352387 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4925956080290721877, guid: a20d50f9de4604e49a72ce3c65d3998d, type: 3}
+  m_PrefabInstance: {fileID: 936352386}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &938621299 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4172512360895337929, guid: 8e1cd622ecaa42f4d91eebd01870d91f, type: 3}
@@ -128067,8 +128072,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.51595, y: -0.91485, z: 0}
-    m_Extent: {x: 2.52165, y: 1.96035, z: 0}
+    m_Center: {x: 1.51795, y: -0.9132, z: 0}
+    m_Extent: {x: 2.52275, y: 1.9643, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -128617,8 +128622,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 19.1789, y: -35.914, z: 0}
-    m_Extent: {x: 67.3881, y: 41.1567, z: 0}
+    m_Center: {x: 19.178951, y: -35.9096, z: 0}
+    m_Extent: {x: 67.38776, y: 41.1504, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -138252,6 +138257,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1142391528019634795, guid: 7870a373eaf09154db621bb50fdfd1f8, type: 3}
+      propertyPath: keyCountText
+      value: 
+      objectReference: {fileID: 1088572443}
+    - target: {fileID: 1142391528019634795, guid: 7870a373eaf09154db621bb50fdfd1f8, type: 3}
+      propertyPath: objectToDeactivate
+      value: 
+      objectReference: {fileID: 936352387}
     - target: {fileID: 8095947988399510746, guid: 7870a373eaf09154db621bb50fdfd1f8, type: 3}
       propertyPath: m_Name
       value: Player
