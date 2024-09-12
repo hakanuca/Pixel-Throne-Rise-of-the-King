@@ -14,6 +14,8 @@ public class FlyingEnemyMiniBoss : Enemy
     public float fireballCooldown = 3f; // Updated cooldown to 3 seconds
     private float lastFireballTime;
 
+    private Animator animator; // Animator component
+
     protected override void Start()
     {
         base.Start();
@@ -21,6 +23,7 @@ public class FlyingEnemyMiniBoss : Enemy
         {
             player = GameObject.FindGameObjectWithTag("Player");
         }
+        animator = GetComponent<Animator>(); // Initialize the Animator
     }
 
     void Update()
@@ -41,6 +44,7 @@ public class FlyingEnemyMiniBoss : Enemy
 
     void ThrowFireball()
     {
+        animator.SetTrigger("Attack"); // Trigger the attack animation
         GameObject fireball = Instantiate(fireballPrefab, transform.position, Quaternion.identity);
         StartCoroutine(FollowPlayer(fireball));
         Destroy(fireball, 3f); // Destroy fireball after 3 seconds
@@ -61,6 +65,7 @@ public class FlyingEnemyMiniBoss : Enemy
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            animator.SetTrigger("Hurt");
             collision.gameObject.GetComponent<Health>().TakeDamage(damage);
         }
     }

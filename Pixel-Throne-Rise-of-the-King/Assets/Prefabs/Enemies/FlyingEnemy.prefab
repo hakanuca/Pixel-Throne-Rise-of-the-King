@@ -256,10 +256,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2111314619}
-  healthBarFill: {fileID: 0}
-  healthyColor: {r: 0, g: 1, b: 0, a: 1}
-  mediumHealthColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  criticalHealthColor: {r: 1, g: 0, b: 0, a: 1}
+  healthBarFill: {fileID: 1866313301}
+  healthyColor: {r: 0.5754717, g: 0.02954276, b: 0, a: 1}
+  mediumHealthColor: {r: 0.6320754, g: 0, b: 0, a: 1}
+  criticalHealthColor: {r: 0.7735849, g: 0, b: 0.04540286, a: 1}
 --- !u!1 &2132114534
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,7 +297,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15.828674, y: 3.7255712}
+  m_AnchoredPosition: {x: -0.5, y: 2.57}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2132114538
@@ -409,8 +409,9 @@ GameObject:
   - component: {fileID: 322241900132052043}
   - component: {fileID: 322241900132052040}
   - component: {fileID: 322241900132052046}
-  - component: {fileID: 322241900132052047}
   - component: {fileID: 322241900132052044}
+  - component: {fileID: 534168935}
+  - component: {fileID: 534168936}
   m_Layer: 6
   m_Name: FlyingEnemy
   m_TagString: Untagged
@@ -427,7 +428,7 @@ Transform:
   m_GameObject: {fileID: 322241900132052042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.98, y: -2.15, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2132114535}
@@ -499,32 +500,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1.3
---- !u!61 &322241900132052047
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 322241900132052042}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.0625, y: 3.6875}
-    newSize: {x: 1.125, y: 1.0625}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.125, y: 1.0625}
-  m_EdgeRadius: 0
 --- !u!114 &322241900132052044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,15 +512,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 552ea128f11f6d54e882dd51a0d24dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 534168935}
   maxHealth: 5
   currentHealth: 0
   enemyHealthbar: {fileID: 2111314618}
-  player: {fileID: 0}
   speed: 2
   damage: 1
-  distanceBetween: 20
-  fireballPrefab: {fileID: 0}
-  fireballSpeed: 0
-  fireballCooldown: 2
   patrolDistance: 5
+--- !u!95 &534168935
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322241900132052042}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 22286f188fc1b804084ddf9f2c41bdd3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!58 &534168936
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322241900132052042}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.3855734, y: -0.10604131}
+  serializedVersion: 2
+  m_Radius: 1.1679474
