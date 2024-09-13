@@ -25,10 +25,6 @@ public class BulletScript : MonoBehaviour
             float rotation = Mathf.Atan2(-direction.y, -direction.x);
             transform.rotation = Quaternion.Euler(0, 0, rotation + 90);
         }
-        else
-        {
-            Debug.LogError("Player not found");
-        }
     }
 
     // Update is called once per frame

@@ -9,12 +9,13 @@ public class FlyingEnemyMiniBoss : Enemy
     public float distanceBetween;
     private float distance;
 
-    [SerializeField] private GameObject fireballPrefab; // Reference to the fireball prefab
+    [SerializeField] private GameObject fireballPrefab; 
     public float fireballSpeed;
-    public float fireballCooldown = 3f; // Updated cooldown to 3 seconds
+    public float fireballCooldown = 3f; 
+    
     private float lastFireballTime;
 
-    private Animator animator; // Animator component
+    private Animator animator; 
 
     protected override void Start()
     {
@@ -34,6 +35,16 @@ public class FlyingEnemyMiniBoss : Enemy
             Vector2 direction = (player.transform.position - transform.position).normalized;
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
 
+            // Flip the enemy to face the player
+            if (direction.x > 0)
+            {
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
+            else if (direction.x < 0)
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+            }
+
             if (Time.time > lastFireballTime + fireballCooldown)
             {
                 ThrowFireball();
@@ -46,10 +57,15 @@ public class FlyingEnemyMiniBoss : Enemy
     {
         animator.SetTrigger("Attack"); // Trigger the attack animation
         GameObject fireball = Instantiate(fireballPrefab, transform.position, Quaternion.identity);
+    
+        // Ignore collision between the fireball and the enemy
+        Collider2D fireballCollider = fireball.GetComponent<Collider2D>();
+        Collider2D enemyCollider = GetComponent<Collider2D>();
+        
         StartCoroutine(FollowPlayer(fireball));
         Destroy(fireball, 3f); // Destroy fireball after 3 seconds
     }
-
+    
     IEnumerator FollowPlayer(GameObject fireball)
     {
         while (fireball != null)
@@ -57,6 +73,17 @@ public class FlyingEnemyMiniBoss : Enemy
             Vector2 direction = (player.transform.position - fireball.transform.position).normalized;
             Rigidbody2D rb = fireball.GetComponent<Rigidbody2D>();
             rb.velocity = direction * fireballSpeed;
+
+            // Flip the fireball to face the player
+            if (direction.x > 0)
+            {
+                fireball.transform.localScale = new Vector3(-1, 1, 1);
+            }
+            else if (direction.x < 0)
+            {
+                fireball.transform.localScale = new Vector3(1, 1, 1);
+            }
+
             yield return null;
         }
     }
