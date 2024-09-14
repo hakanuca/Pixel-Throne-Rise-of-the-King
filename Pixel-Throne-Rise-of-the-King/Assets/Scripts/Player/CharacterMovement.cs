@@ -21,7 +21,7 @@ public class CharacterMovement : MonoBehaviour
     private string GROUND_TAG = "Ground";
     private bool extraSpeedActive = false;
     private bool extraJumpActive = false;
-    public Animator animator;
+    private Animator animator;
     public bool isDashing { get; private set; } = false;
     private float dashTime;
     private Collider2D characterCollider;
@@ -52,6 +52,8 @@ public class CharacterMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         characterCollider = GetComponent<Collider2D>();
+        animator = GetComponent<Animator>();
+
     }
 
     private void Update()
@@ -67,6 +69,9 @@ public class CharacterMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.LeftControl))
             {
                 StartDash();
+            }
+            else{
+                dashEffect.SetActive(false);
             }
         }
     }
@@ -110,7 +115,7 @@ public class CharacterMovement : MonoBehaviour
     {
         isDashing = true;
         dashEffect.SetActive(true);
-        animator.SetTrigger("Dash");
+        animator.Play("smoke2");  // Replace with your animation name
         dashTime = Time.time + dashDuration;
         rb.velocity = new Vector2(transform.localScale.x * dashSpeed, 0);
         Physics2D.IgnoreLayerCollision(playerLayer, bossLayer, true);
