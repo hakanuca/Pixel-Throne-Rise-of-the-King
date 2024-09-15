@@ -39,9 +39,7 @@ public class BossHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        Debug.Log("TakeDamage" + isInvulnerable);
         if (isInvulnerable) return;
-        Debug.Log("Inside Take Damage");
         currentHealth -= damage;
         animator.SetTrigger("Glowing");
         enemyHealthbar.UpdateBossHealthbar();
@@ -77,6 +75,11 @@ public class BossHealth : MonoBehaviour
         Destroy(gameObject, 3f);
     }
 
+    public void OnDeath(Action action)
+    {
+        onDeath = action;
+    }
+    
     #endregion
 
     #region Enum
