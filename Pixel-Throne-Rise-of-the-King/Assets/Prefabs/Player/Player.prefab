@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 649885915232842040}
   - component: {fileID: 649885915232842039}
   m_Layer: 7
-  m_Name: Light 2D
+  m_Name: CrownLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,8 +66,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.24904999, y: 0.6386, z: 0}
-    m_Extent: {x: 1.03045, y: 0.6632, z: 0}
+    m_Center: {x: 0.2555, y: 0.64585, z: 0}
+    m_Extent: {x: 1.0353, y: 0.66475004, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -257,7 +257,6 @@ MonoBehaviour:
   dashSpeed: 20
   dashDuration: 0.2
   rb: {fileID: 8095947988399510745}
-  animator: {fileID: 8095947988399510751}
   dashAnimation: {fileID: 5332035568854549490}
   dashEffect: {fileID: 5332035568854549491}
 --- !u!50 &8095947988399510745

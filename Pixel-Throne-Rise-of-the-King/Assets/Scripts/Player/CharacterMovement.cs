@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -171,6 +172,44 @@ public class CharacterMovement : MonoBehaviour
     public void PlayAnimation()
     {
         animator.SetTrigger("IsDoorTriggered");
+    }
+    #endregion
+    
+    #region Collider Disabling Functions
+    public void DisableCurrentColliders()
+    {
+        Collider2D[] colliders = GetComponents<Collider2D>();
+
+        foreach (Collider2D collider in colliders)
+        {
+            collider.enabled = false;
+        }
+        
+    }
+    #endregion
+    
+    #region Scene Restart Function
+    public void RestartScene()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
+    }
+    #endregion
+
+    #region Rigidbody Freeze Function
+    public void FreezeRigidbodyX()
+    {
+        if (rb != null){
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+        }
+    }
+
+    public void UnfreezeRigidbodyX()
+    {
+        if (rb != null)
+        {
+            rb.constraints = RigidbodyConstraints2D.None; 
+        }
     }
     #endregion
 }
