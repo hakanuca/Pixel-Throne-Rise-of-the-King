@@ -30,12 +30,24 @@ public class CharacterMovement : MonoBehaviour
     public int playerLayer { get; set; }
     public int bossLayer { get; set; }
     [SerializeField] private GameObject dashEffect;
+
+    // New sprint-related variables
+    private bool isSprinting = false;
+    private float sprintEndTime;
+    private float sprintCooldownEndTime;
+    private bool sprintOnCooldown = false;
+    public float sprintDuration = 2f;  // Sprint duration
+    public float sprintCooldown = 2f;  // Sprint cooldown
+
+    // New dash cooldown variable
+    private float dashCooldownEndTime;
+    public float dashCooldown = 2f;  // Dash cooldown
+    private bool dashOnCooldown = false;
     #endregion
 
     #region Event Functions
     private void Awake()
     {
-        
         if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
@@ -48,13 +60,12 @@ public class CharacterMovement : MonoBehaviour
         bossLayer = LayerMask.NameToLayer("Boss");
         dashEffect.SetActive(false);
     }
-    
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         characterCollider = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
-
     }
 
     private void Update()
@@ -67,7 +78,10 @@ public class CharacterMovement : MonoBehaviour
         {
             Jump();
             Move();
-            if (Input.GetKeyDown(KeyCode.LeftControl))
+            HandleSprint(); // Handle sprint logic
+
+            // Check for dash input and cooldown
+            if (Input.GetKeyDown(KeyCode.LeftControl) && !dashOnCooldown)
             {
                 StartDash();
             }
@@ -75,13 +89,17 @@ public class CharacterMovement : MonoBehaviour
             {
                 dashEffect.SetActive(false);
             }
+
             if (Input.GetKeyDown(KeyCode.E))
             {
                 DoorAnim();
             }
-            else{
-                
-            }
+        }
+
+        // Check if dash is on cooldown
+        if (Time.time >= dashCooldownEndTime)
+        {
+            dashOnCooldown = false;
         }
     }
     #endregion
@@ -109,12 +127,13 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
-
     private void Move()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float currentMoveSpeed = extraSpeedActive ? moveSpeed + extraSpeedFromApple : moveSpeed;
-        if (Input.GetKey(KeyCode.LeftShift))
+
+        // Handle sprint
+        if (isSprinting)
         {
             currentMoveSpeed *= sprintMultiplier;
         }
@@ -133,14 +152,42 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
+    private void HandleSprint()
+    {
+        // Sprint activation and cooldown
+        if (Input.GetKey(KeyCode.LeftShift) && !isSprinting && !sprintOnCooldown)
+        {
+            isSprinting = true;
+            sprintEndTime = Time.time + sprintDuration;
+        }
+
+        // Check if sprint should end
+        if (isSprinting && Time.time >= sprintEndTime)
+        {
+            isSprinting = false;
+            sprintOnCooldown = true;
+            sprintCooldownEndTime = Time.time + sprintCooldown;
+        }
+
+        // Check if sprint cooldown is over
+        if (sprintOnCooldown && Time.time >= sprintCooldownEndTime)
+        {
+            sprintOnCooldown = false;
+        }
+    }
+
     private void StartDash()
     {
         isDashing = true;
         dashEffect.SetActive(true);
-        animator.Play("smoke2");  // Replace with your animation name
+        animator.Play("smoke2");  
         dashTime = Time.time + dashDuration;
         rb.velocity = new Vector2(transform.localScale.x * dashSpeed, 0);
         Physics2D.IgnoreLayerCollision(playerLayer, bossLayer, true);
+
+        // Set dash on cooldown
+        dashOnCooldown = true;
+        dashCooldownEndTime = Time.time + dashCooldown;
     }
 
     private void Dash()
@@ -148,15 +195,16 @@ public class CharacterMovement : MonoBehaviour
         if (Time.time >= dashTime)
         {
             isDashing = false;
-            
         }
     }
-    
-    private void DoorAnim(){
-        animator.Play("Main_Character_DoorIn");  // Replace with your animation name
+
+    private void DoorAnim()
+    {
+        animator.Play("Main_Character_DoorIn");  
     }
 
-    public void DeactivatePlayer(){
+    public void DeactivatePlayer()
+    {
         gameObject.SetActive(false);
     }
     #endregion
@@ -187,7 +235,7 @@ public class CharacterMovement : MonoBehaviour
         animator.SetTrigger("IsDoorTriggered");
     }
     #endregion
-    
+
     #region Collider Disabling Functions
     public void DisableCurrentColliders()
     {
@@ -197,10 +245,9 @@ public class CharacterMovement : MonoBehaviour
         {
             collider.enabled = false;
         }
-        
     }
     #endregion
-    
+
     #region Scene Restart Function
     public void RestartScene()
     {
@@ -212,7 +259,8 @@ public class CharacterMovement : MonoBehaviour
     #region Rigidbody Freeze Function
     public void FreezeRigidbodyX()
     {
-        if (rb != null){
+        if (rb != null)
+        {
             rb.constraints = RigidbodyConstraints2D.FreezePositionX;
         }
     }
