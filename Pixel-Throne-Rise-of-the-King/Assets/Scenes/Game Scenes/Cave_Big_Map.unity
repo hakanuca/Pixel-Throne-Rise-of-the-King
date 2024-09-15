@@ -858,8 +858,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.52365, y: -0.91545004, z: 0}
-    m_Extent: {x: 2.51855, y: 1.96525, z: 0}
+    m_Center: {x: 1.5174999, y: -0.91179997, z: 0}
+    m_Extent: {x: 2.5259, y: 1.9602001, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -125907,8 +125907,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -13.930501, y: 0.7524004, z: 0}
-    m_Extent: {x: 40.5441, y: 16.1675, z: 0}
+    m_Center: {x: -13.92505, y: 0.7481499, z: 0}
+    m_Extent: {x: 40.54655, y: 16.16555, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -128329,8 +128329,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.5162501, y: -0.91015, z: 0}
-    m_Extent: {x: 2.51235, y: 1.9683499, z: 0}
+    m_Center: {x: 1.5188501, y: -0.90865, z: 0}
+    m_Extent: {x: 2.51845, y: 1.96805, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -128879,8 +128879,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 19.167, y: -35.9133, z: 0}
-    m_Extent: {x: 67.3881, y: 41.152397, z: 0}
+    m_Center: {x: 19.1754, y: -35.916847, z: 0}
+    m_Extent: {x: 67.3851, y: 41.15535, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -138674,6 +138674,10 @@ PrefabInstance:
       propertyPath: objectToDeactivate
       value: 
       objectReference: {fileID: 936352387}
+    - target: {fileID: 8095947988399510738, guid: 7870a373eaf09154db621bb50fdfd1f8, type: 3}
+      propertyPath: startingHealth
+      value: 3.9
+      objectReference: {fileID: 0}
     - target: {fileID: 8095947988399510746, guid: 7870a373eaf09154db621bb50fdfd1f8, type: 3}
       propertyPath: m_Name
       value: Player
