@@ -42,6 +42,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Game Scenes/Infinity_Map.unity
     guid: f8d49f3433d84b04eabe64da90490a05
   - enabled: 1
+    path: Assets/Scenes/LoadingScenes/Loading_Scene.unity
+    guid: 93883eaa2d2ab21469a04f643475e12a
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Clone_Infinity_Map.unity
+    guid: 437d966a1cde6644082f8d81bfc4f8c7
+  - enabled: 1
     path: Assets/Scenes/Game Scenes/Kingdom_Map.unity
     guid: c3710b55224496a48a692f1c70e3bf31
   - enabled: 1
@@ -50,4 +56,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game Scenes/Skull_Map.unity
     guid: 45b885ac3fdfba641a87f421f5a492a9
+  - enabled: 1
+    path: Assets/Scenes/LoadingScenes/Loading_Scene 1.unity
+    guid: b69cfce6ace3bb546b2760418a8c514f
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Clone_Skull_Map.unity
+    guid: 0c21d8f62796da84dac46b4b519d3832
   m_configObjects: {}
