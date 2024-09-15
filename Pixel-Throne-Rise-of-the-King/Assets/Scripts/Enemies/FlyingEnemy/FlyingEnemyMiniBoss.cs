@@ -55,11 +55,17 @@ public class FlyingEnemyMiniBoss : Enemy
 
     void ThrowFireball()
     {
-        animator.SetTrigger("Attack"); // Trigger the attack animation
-        GameObject fireball = Instantiate(fireballPrefab, transform.position, Quaternion.identity);
-        
-        StartCoroutine(FollowPlayer(fireball));
-        Destroy(fireball, 3f); 
+        if (fireballPrefab != null)
+        {
+            animator.SetTrigger("Attack"); 
+            GameObject fireball = Instantiate(fireballPrefab, transform.position, Quaternion.identity);
+            StartCoroutine(FollowPlayer(fireball));
+            Destroy(fireball, 3f); 
+        }
+        else
+        {
+            Debug.LogError("fireballPrefab is not assigned!");
+        }
     }
     
     IEnumerator FollowPlayer(GameObject fireball)

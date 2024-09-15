@@ -124,7 +124,7 @@ MonoBehaviour:
   distanceBetween: 20
   fireballPrefab: {fileID: 6730218989917114365, guid: f606d13839688c646a9313af2c29c32f, type: 3}
   fireballSpeed: 5
-  fireballCooldown: 5
+  fireballCooldown: 2
 --- !u!95 &1725336715208419999
 Animator:
   serializedVersion: 5

@@ -38,21 +38,18 @@ public class Health : MonoBehaviour
 
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
 
-        if (currentHealth > 0)
+        if (currentHealth < 0.1f && !dead)
         {
-            anim.SetTrigger("Hurt");
-        }
-        else
-        {
-            if (!dead)
-            {
+            
                 anim.SetTrigger("Die");
-                //audioManager.PlaySFX(audioManager.death);
                 GetComponent<CharacterMovement>().enabled = false;
                 GetComponent<PlayerCombat>().enabled = false;
                 dead = true;
-                //StartCoroutine(ReloadSceneWithCooldown(3f));
-            }
+                StartCoroutine(ReloadSceneWithCooldown(1f));
+        }
+        else
+        {
+            anim.SetTrigger("Hurt");
         }
         StartCoroutine(StartCooldown());
     }

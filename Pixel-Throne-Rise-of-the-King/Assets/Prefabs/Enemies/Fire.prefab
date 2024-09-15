@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6730218989917114367}
   - component: {fileID: 6730218989917114364}
   - component: {fileID: 1319662016}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,9 +127,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6730218989917114366}
     m_Modifications:
+    - target: {fileID: 3416060502848453758, guid: e9bf1eebd97747845bcfb8af1a8cff95, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6556954063034739709, guid: e9bf1eebd97747845bcfb8af1a8cff95, type: 3}
       propertyPath: m_Name
       value: CageLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556954063034739709, guid: e9bf1eebd97747845bcfb8af1a8cff95, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773095348238334095, guid: e9bf1eebd97747845bcfb8af1a8cff95, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 9174812217532238688, guid: e9bf1eebd97747845bcfb8af1a8cff95, type: 3}
       propertyPath: m_RootOrder
