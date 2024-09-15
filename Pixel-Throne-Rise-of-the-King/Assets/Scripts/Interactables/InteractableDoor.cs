@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class InteractableDoor : IInteractable
 {
-    public string sceneName;
     public Animator doorAnimator;
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
@@ -40,6 +39,9 @@ public class InteractableDoor : IInteractable
     {
         doorAnimator.SetTrigger("IsClose");
         yield return new WaitForSeconds(doorAnimator.GetCurrentAnimatorStateInfo(0).length + 3f);
-        SceneManager.LoadScene(sceneName);
+
+        // Get the current scene index and load the next scene
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex + 1);
     }
 }

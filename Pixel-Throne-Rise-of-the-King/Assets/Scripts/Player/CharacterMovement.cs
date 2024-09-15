@@ -70,8 +70,16 @@ public class CharacterMovement : MonoBehaviour
             {
                 StartDash();
             }
-            else{
+            else
+            {
                 dashEffect.SetActive(false);
+            }
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                DoorAnim();
+            }
+            else{
+                
             }
         }
     }
@@ -128,6 +136,14 @@ public class CharacterMovement : MonoBehaviour
             isDashing = false;
             
         }
+    }
+    
+    private void DoorAnim(){
+        animator.Play("Main_Character_DoorIn");  // Replace with your animation name
+    }
+
+    public void DeactivatePlayer(){
+        gameObject.SetActive(false);
     }
     #endregion
 
