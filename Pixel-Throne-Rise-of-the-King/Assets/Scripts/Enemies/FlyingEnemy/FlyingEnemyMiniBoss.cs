@@ -24,7 +24,7 @@ public class FlyingEnemyMiniBoss : Enemy
         {
             player = GameObject.FindGameObjectWithTag("Player");
         }
-        animator = GetComponent<Animator>(); // Initialize the Animator
+        animator = GetComponent<Animator>(); 
     }
 
     void Update()
@@ -57,13 +57,9 @@ public class FlyingEnemyMiniBoss : Enemy
     {
         animator.SetTrigger("Attack"); // Trigger the attack animation
         GameObject fireball = Instantiate(fireballPrefab, transform.position, Quaternion.identity);
-    
-        // Ignore collision between the fireball and the enemy
-        Collider2D fireballCollider = fireball.GetComponent<Collider2D>();
-        Collider2D enemyCollider = GetComponent<Collider2D>();
         
         StartCoroutine(FollowPlayer(fireball));
-        Destroy(fireball, 3f); // Destroy fireball after 3 seconds
+        Destroy(fireball, 3f); 
     }
     
     IEnumerator FollowPlayer(GameObject fireball)
