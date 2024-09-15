@@ -87,15 +87,28 @@ public class CharacterMovement : MonoBehaviour
     #endregion
 
     #region Movement Functions
+    public float fallMultiplier = 2.5f;  // Multiplier for faster fall
+    public float lowJumpMultiplier = 2f; // Multiplier for lower jump when jump button is released early
+
     private void Jump()
     {
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             animator.SetBool("IsJumping", true);
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce); 
             isGrounded = false;
         }
+
+        if (rb.velocity.y > 0 && !Input.GetButton("Jump"))
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        }
+        else if (rb.velocity.y < 0)
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        }
     }
+
 
     private void Move()
     {
