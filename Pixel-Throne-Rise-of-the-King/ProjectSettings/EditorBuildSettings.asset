@@ -33,6 +33,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Game Scenes/Cave_Big_Map.unity
     guid: d88ca7e62b226874e8ea379d9b15b53e
   - enabled: 1
+    path: Assets/Scenes/LoadingScenes/Loading_Scene 2.unity
+    guid: 83a0d32c5a26b924486dd68de76b793c
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Flying_Boss_Scene.unity
+    guid: e14e18021d721f442bbfe9e2494a8927
+  - enabled: 1
     path: Assets/Scenes/Game Scenes/Final_Fight_Map.unity
     guid: a96e7277a9481894ebddc75fcdd34710
   - enabled: 1
@@ -57,9 +63,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Game Scenes/Skull_Map.unity
     guid: 45b885ac3fdfba641a87f421f5a492a9
   - enabled: 1
+    path: Assets/Scenes/LoadingScenes/Loading_Scene 3.unity
+    guid: 13b61a2f65345f84c9c9d3cdc8831c35
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Star_Boss_Scene.unity
+    guid: 0c21d8f62796da84dac46b4b519d3832
+  - enabled: 1
     path: Assets/Scenes/LoadingScenes/Loading_Scene 1.unity
     guid: b69cfce6ace3bb546b2760418a8c514f
-  - enabled: 1
-    path: Assets/Scenes/Game Scenes/Clone_Skull_Map.unity
-    guid: 0c21d8f62796da84dac46b4b519d3832
   m_configObjects: {}
