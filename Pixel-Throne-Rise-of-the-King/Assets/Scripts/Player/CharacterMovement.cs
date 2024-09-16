@@ -89,11 +89,6 @@ public class CharacterMovement : MonoBehaviour
             {
                 dashEffect.SetActive(false);
             }
-
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                DoorAnim();
-            }
         }
 
         // Check if dash is on cooldown
@@ -196,11 +191,6 @@ public class CharacterMovement : MonoBehaviour
         {
             isDashing = false;
         }
-    }
-
-    private void DoorAnim()
-    {
-        animator.Play("Main_Character_DoorIn");  
     }
 
     public void DeactivatePlayer()

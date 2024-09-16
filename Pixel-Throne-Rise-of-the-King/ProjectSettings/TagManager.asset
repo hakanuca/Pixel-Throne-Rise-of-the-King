@@ -12,6 +12,7 @@ TagManager:
   - GM
   - Collectible
   - Key
+  - Door
   layers:
   - Default
   - TransparentFX
