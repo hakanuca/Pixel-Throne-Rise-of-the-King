@@ -13,6 +13,7 @@ public class Health : MonoBehaviour
     private bool IsAvailable = true;
     private int CooldownDuration = 1;
     [SerializeField] private bool isInvincible;
+    [SerializeField] private GameObject crownLight;
 
     private void Awake()
     {
@@ -62,6 +63,7 @@ public class Health : MonoBehaviour
     private IEnumerator ReloadSceneWithCooldown(float cooldownTime)
     {
         cooldownActive = true;
+        crownLight.SetActive(false);
         yield return new WaitForSeconds(cooldownTime);
         RestartScene();
         cooldownActive = false;

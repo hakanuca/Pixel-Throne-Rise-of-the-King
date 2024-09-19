@@ -259,6 +259,11 @@ MonoBehaviour:
   rb: {fileID: 8095947988399510745}
   dashAnimation: {fileID: 5332035568854549490}
   dashEffect: {fileID: 5332035568854549491}
+  sprintDuration: 2
+  sprintCooldown: 2
+  dashCooldown: 2
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2
 --- !u!50 &8095947988399510745
 Rigidbody2D:
   serializedVersion: 4
@@ -342,6 +347,7 @@ MonoBehaviour:
   startingHealth: 3.9
   anim: {fileID: 8095947988399510751}
   isInvincible: 0
+  crownLight: {fileID: 649885915232842041}
 --- !u!114 &8095947988399510739
 MonoBehaviour:
   m_ObjectHideFlags: 0
