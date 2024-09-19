@@ -238,14 +238,6 @@ public class CharacterMovement : MonoBehaviour
     }
     #endregion
 
-    #region Scene Restart Function
-    public void RestartScene()
-    {
-        Scene currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currentScene.name);
-    }
-    #endregion
-
     #region Rigidbody Freeze Function
     public void FreezeRigidbodyX()
     {

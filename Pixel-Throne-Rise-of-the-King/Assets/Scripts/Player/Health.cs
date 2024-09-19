@@ -63,7 +63,7 @@ public class Health : MonoBehaviour
     {
         cooldownActive = true;
         yield return new WaitForSeconds(cooldownTime);
-        SceneManager.LoadScene(0);
+        RestartScene();
         cooldownActive = false;
     }
 
@@ -72,5 +72,11 @@ public class Health : MonoBehaviour
         IsAvailable = false;
         yield return new WaitForSeconds(CooldownDuration);
         IsAvailable = true;
+    }
+    
+    public void RestartScene()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
     }
 }
