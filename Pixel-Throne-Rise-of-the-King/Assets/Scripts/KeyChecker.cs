@@ -10,7 +10,7 @@ public class KeyChecker : MonoBehaviour
     
     void Check()
     {
-        keyCountText.text = "Keys: " + keyCount;
+        keyCountText.text = "Keys: 10/" + keyCount;
     }
     
     private void OnTriggerEnter2D(Collider2D other)
