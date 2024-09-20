@@ -35,4 +35,8 @@ public class CutScene : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
+    
+    public void MainMenuEnter(){
+        SceneManager.LoadScene(1);
+    }
 }
