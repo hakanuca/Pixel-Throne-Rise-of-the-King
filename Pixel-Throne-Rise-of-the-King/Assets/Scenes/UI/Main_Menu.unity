@@ -562,7 +562,6 @@ MonoBehaviour:
   menu5: {fileID: 20934060}
   visiblePositionMenu5: {fileID: 1653359082}
   itchio: {fileID: 27860733}
-  gp: {fileID: 0}
 --- !u!114 &143749054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1231,7 +1230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 605371001}
   SFXSource: {fileID: 1289453596}
-  background: {fileID: 8300000, guid: 9ea4aa3c5c97b914aa9b31dca3edc8f1, type: 3}
+  background: {fileID: 8300000, guid: 0440a6dd0a86d964eae996c4bdd7386a, type: 3}
   death: {fileID: 8300000, guid: 9b583394be85eb04e972280aa8804471, type: 3}
   hit: {fileID: 0}
 --- !u!4 &305703338
@@ -5087,8 +5086,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.2192998, y: 0.116649866, z: 0}
-    m_Extent: {x: 9.9021, y: 5.99485, z: 0}
+    m_Center: {x: 0.21869993, y: 0.12459993, z: 0}
+    m_Extent: {x: 9.9051, y: 5.9916, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

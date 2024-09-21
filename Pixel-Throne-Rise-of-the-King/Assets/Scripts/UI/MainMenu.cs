@@ -28,7 +28,6 @@ public class MainMenu : MonoBehaviour
 
     [SerializeField] private GameObject itchio;
 
-    [SerializeField] private GameObject gp;
 
     void Start()
     {
@@ -42,7 +41,6 @@ public class MainMenu : MonoBehaviour
         LeanTween.delayedCall(6f, () => LeanTween.move(menu4, visiblePositionMenu4.position, 1f));
         LeanTween.delayedCall(7f, () => LeanTween.move(menu5, visiblePositionMenu5.position, 1f));
         LeanTween.delayedCall(8.5f, () => itchio.SetActive(true));
-        LeanTween.delayedCall(8.5f, () => gp.SetActive(true));
     }
 
     public void PlayGame()
