@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class BulletScript : MonoBehaviour
@@ -10,6 +6,8 @@ public class BulletScript : MonoBehaviour
     private Rigidbody2D rb;
     public float force;
     private float timer;
+    public float damage;
+
 
     // Start is called before the first frame update
     void Start()
@@ -36,11 +34,15 @@ public class BulletScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (collision.gameObject.tag == "Player")
         {
-
+            Health playerHealth = collision.gameObject.GetComponent<Health>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damage);
+            }
         }
         Destroy(gameObject);
     }
