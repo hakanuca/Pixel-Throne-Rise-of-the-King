@@ -48,8 +48,10 @@ public class StarBase : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
             yield return null;
         }
-
+        animator.SetBool("Attack", false);
         yield return new WaitForSeconds(3f);
+        
         Attack();
     }
+    
 }

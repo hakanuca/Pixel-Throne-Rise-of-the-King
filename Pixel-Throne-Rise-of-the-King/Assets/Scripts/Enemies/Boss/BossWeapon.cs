@@ -5,7 +5,6 @@ public class BossWeapon : MonoBehaviour
     public Animator animator;
     public Vector3 attackOffset;
     public float attackRange = 1f;
-    public GameObject laserPrefab;
     public float minDistance = 20f;
     public float cooldown = 3f; 
     float lastAttackTime;
@@ -15,6 +14,7 @@ public class BossWeapon : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("BossWeapon");
         boss = GetComponent<Boss>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         lastAttackTime = -cooldown;
@@ -22,14 +22,16 @@ public class BossWeapon : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log("BossWeapon1");
         if (Vector3.Distance(transform.position, player.position) <= minDistance)
         {
-            
+            Attack();
         }
     }
 
     public void Attack()
     {
+        Debug.Log("BossWeapon2");
         Vector3 pos = transform.position;
         pos += transform.right * attackOffset.x;
         pos += transform.up * attackOffset.y;
