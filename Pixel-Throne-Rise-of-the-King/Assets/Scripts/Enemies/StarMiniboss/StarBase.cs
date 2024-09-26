@@ -10,17 +10,23 @@ public class StarBase : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     private float lastAttackTime;
     [SerializeField] private float attackSpeed = 20f;
+    [SerializeField] private float attackRange = 10f; // Added attack range
+    private BossHealth bossHealth; // Reference to BossHealth
 
     private void Start()
     {
         boss = GetComponent<Boss>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         lastAttackTime = -cooldown;
+        bossHealth = GetComponent<BossHealth>(); // Initialize BossHealth
     }
 
     private void Update()
     {
-        if (Time.time - lastAttackTime >= cooldown)
+        if (bossHealth.currentHealth <= 0) return; // Check if health is zero
+
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+        if (distanceToPlayer <= attackRange && Time.time - lastAttackTime >= cooldown)
         {
             Attack();
         }
@@ -50,8 +56,7 @@ public class StarBase : MonoBehaviour
         }
         animator.SetBool("Attack", false);
         yield return new WaitForSeconds(3f);
-        
+
         Attack();
     }
-    
 }

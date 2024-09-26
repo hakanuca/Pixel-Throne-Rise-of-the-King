@@ -325,7 +325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 8095947988399510751}
   attackPoint: {fileID: 8095947988363072468}
-  attackRange: 0.5
+  attackRange: 1.25
   attackDamage: 1
   bossAttackDamage: 2
   enemyLayers:

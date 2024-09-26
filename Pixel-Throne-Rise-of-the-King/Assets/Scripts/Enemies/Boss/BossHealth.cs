@@ -11,7 +11,6 @@ public class BossHealth : MonoBehaviour
     public float currentHealth;
     private bool isInvulnerable = false;
     [SerializeField] private EnemyHealthbar enemyHealthbar;
-    private Action onDeath;
 
     #endregion
 
@@ -53,7 +52,7 @@ public class BossHealth : MonoBehaviour
             Die();
         }
     }
-    
+
     private void Die()
     {
         animator.SetTrigger("Death");
@@ -70,16 +69,10 @@ public class BossHealth : MonoBehaviour
             rb.isKinematic = true;
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
         }
-        onDeath?.Invoke();
 
         Destroy(gameObject, 3f);
     }
 
-    public void OnDeath(Action action)
-    {
-        onDeath = action;
-    }
-    
     #endregion
 
     #region Enum
