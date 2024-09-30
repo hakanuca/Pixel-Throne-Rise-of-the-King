@@ -25,7 +25,7 @@ public class BossLevelManager : MonoBehaviour
 
     private void OpenDoorsOnBossDeath()
     {
-        door.SetActive(false);
+        door.SetActive(true);
         for (int i = 0; i < startBlocks.Length; i++)
         {
             startBlocks[i].SetActive(false);

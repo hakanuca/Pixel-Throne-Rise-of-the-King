@@ -948,6 +948,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlyingEnemyBoss
       objectReference: {fileID: 0}
+    - target: {fileID: 6066362397993642983, guid: 8b537f7660c3376499225a2af3b47cbc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b537f7660c3376499225a2af3b47cbc, type: 3}
 --- !u!1 &1305645963
@@ -11921,6 +11925,18 @@ PrefabInstance:
     - target: {fileID: 8095947988399510746, guid: 7870a373eaf09154db621bb50fdfd1f8, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095947988399510747, guid: 7870a373eaf09154db621bb50fdfd1f8, type: 3}
+      propertyPath: cameraShake
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095947988399510747, guid: 7870a373eaf09154db621bb50fdfd1f8, type: 3}
+      propertyPath: shakeDuration
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095947988399510747, guid: 7870a373eaf09154db621bb50fdfd1f8, type: 3}
+      propertyPath: shakeMagnitude
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8095947988399510749, guid: 7870a373eaf09154db621bb50fdfd1f8, type: 3}
       propertyPath: m_RootOrder

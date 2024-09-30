@@ -51,6 +51,7 @@ public class StarBase : MonoBehaviour
 
         while (Vector3.Distance(transform.position, targetPosition) > 0.1f)
         {
+            if (bossHealth.currentHealth <= 0) yield break; 
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
             yield return null;
         }
