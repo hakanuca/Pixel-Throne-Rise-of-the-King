@@ -49,6 +49,11 @@ public class BossHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            if (gameObject.CompareTag("Flyingenemyminiboss"))
+            {
+                animator.SetTrigger("Die");
+            }
+            
             Die();
         }
     }

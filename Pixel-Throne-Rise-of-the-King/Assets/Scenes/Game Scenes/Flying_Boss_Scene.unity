@@ -346,8 +346,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.51425, y: -0.91285, z: 0}
-    m_Extent: {x: 2.5227501, y: 1.96425, z: 0}
+    m_Center: {x: 1.5176, y: -0.92045003, z: 0}
+    m_Extent: {x: 2.5247002, y: 1.96105, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -56249,8 +56249,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -13.9285, y: 0.75759983, z: 0}
-    m_Extent: {x: 40.5379, y: 16.1613, z: 0}
+    m_Center: {x: -13.92725, y: 0.7564502, z: 0}
+    m_Extent: {x: 40.53685, y: 16.16215, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -58318,8 +58318,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.5218999, y: -0.91595, z: 0}
-    m_Extent: {x: 2.5209, y: 1.9711499, z: 0}
+    m_Center: {x: 1.5169499, y: -0.91055, z: 0}
+    m_Extent: {x: 2.52295, y: 1.96705, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -58535,8 +58535,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 19.17225, y: -35.91515, z: 0}
-    m_Extent: {x: 67.38455, y: 41.16245, z: 0}
+    m_Center: {x: 19.168098, y: -35.9119, z: 0}
+    m_Extent: {x: 67.3874, y: 41.1517, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -62271,11 +62271,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8095947988399510749, guid: 7870a373eaf09154db621bb50fdfd1f8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 76.88
+      value: 40.85
       objectReference: {fileID: 0}
     - target: {fileID: 8095947988399510749, guid: 7870a373eaf09154db621bb50fdfd1f8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 44.07
+      value: 42.19
       objectReference: {fileID: 0}
     - target: {fileID: 8095947988399510749, guid: 7870a373eaf09154db621bb50fdfd1f8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -62571,19 +62571,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8897998679656325550, guid: 61277ae141c96cb49ac9a86c8a22a551, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 72.34731
+      value: 36.317314
       objectReference: {fileID: 0}
     - target: {fileID: 8897998679656325550, guid: 61277ae141c96cb49ac9a86c8a22a551, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 50.15
+      value: 48.27
       objectReference: {fileID: 0}
     - target: {fileID: 8897998679675215785, guid: 61277ae141c96cb49ac9a86c8a22a551, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 72.34731
+      value: 36.317314
       objectReference: {fileID: 0}
     - target: {fileID: 8897998679675215785, guid: 61277ae141c96cb49ac9a86c8a22a551, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 50.15
+      value: 48.27
       objectReference: {fileID: 0}
     - target: {fileID: 8897998679675215789, guid: 61277ae141c96cb49ac9a86c8a22a551, type: 3}
       propertyPath: orthographic size
@@ -62653,6 +62653,10 @@ PrefabInstance:
     - target: {fileID: 6066362397993642983, guid: 8b537f7660c3376499225a2af3b47cbc, type: 3}
       propertyPath: m_Name
       value: FlyingEnemyBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066362397993642983, guid: 8b537f7660c3376499225a2af3b47cbc, type: 3}
+      propertyPath: m_TagString
+      value: Flyingenemyminiboss
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b537f7660c3376499225a2af3b47cbc, type: 3}

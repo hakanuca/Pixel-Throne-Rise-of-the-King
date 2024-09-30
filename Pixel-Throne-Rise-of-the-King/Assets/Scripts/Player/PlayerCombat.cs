@@ -11,7 +11,7 @@ public class PlayerCombat : MonoBehaviour
     public float attackRate = 2f;
     private float nextAttackTime = 0f;
 
-    void Update()
+    private void Update()
     {
         if (Time.time >= nextAttackTime)
         {
@@ -30,7 +30,7 @@ public class PlayerCombat : MonoBehaviour
         return enemyLayers;
     }
 
-    void Attack()
+    private void Attack()
     {
         animator.SetTrigger("Attack");
 
@@ -43,7 +43,7 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    void AttackBoss()
+    private void AttackBoss()
     {
         animator.SetTrigger("Attack");
         Collider2D bossHealthCollider = Physics2D.OverlapCircle(attackPoint.position, attackRange, LayerMask.GetMask("Boss"));
@@ -58,7 +58,7 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    void AttackMiniBoss()
+    private void AttackMiniBoss()
     {
         animator.SetTrigger("Attack");
         Collider2D bossHealthCollider = Physics2D.OverlapCircle(attackPoint.position, attackRange, LayerMask.GetMask("Boss"));
@@ -73,7 +73,7 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    void OnDrawGizmosSelected()
+    private void OnDrawGizmosSelected()
     {
         if (attackPoint == null)
             return;
