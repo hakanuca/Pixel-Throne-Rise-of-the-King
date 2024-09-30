@@ -1748,8 +1748,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -1.5051498, y: 3.7834506, z: 0}
-    m_Extent: {x: 48.71265, y: 16.65745, z: 0}
+    m_Center: {x: -1.5013504, y: 3.7785501, z: 0}
+    m_Extent: {x: 48.71125, y: 16.655651, z: 0}
   m_PointLightInnerAngle: 359.99997
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 1.0094991
@@ -16523,8 +16523,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -1.4947, y: 0.352, z: 0}
-    m_Extent: {x: 2.1054, y: 1.5295, z: 0}
+    m_Center: {x: -1.49385, y: 0.357, z: 0}
+    m_Extent: {x: 2.10815, y: 1.5223, z: 0}
   m_PointLightInnerAngle: 359.99997
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 1.0094991
@@ -16667,8 +16667,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.57824993, y: 0.082099915, z: 0}
-    m_Extent: {x: 3.30985, y: 2.9166, z: 0}
+    m_Center: {x: -0.5833, y: 0.07620001, z: 0}
+    m_Extent: {x: 3.3116999, y: 2.909, z: 0}
   m_PointLightInnerAngle: 359.99997
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 1.0094991
@@ -78458,8 +78458,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.29605, y: 0.34965003, z: 0}
-    m_Extent: {x: 2.15835, y: 1.54765, z: 0}
+    m_Center: {x: -0.29314995, y: 0.3373, z: 0}
+    m_Extent: {x: 2.16885, y: 1.5493, z: 0}
   m_PointLightInnerAngle: 359.99997
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 1.0094991
@@ -78921,8 +78921,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.8634, y: 0.3945999, z: 0}
-    m_Extent: {x: 3.0124, y: 2.9368, z: 0}
+    m_Center: {x: -0.87525, y: 0.4002, z: 0}
+    m_Extent: {x: 3.0183501, y: 2.9266, z: 0}
   m_PointLightInnerAngle: 359.99997
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 1.0094991
@@ -78952,6 +78952,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 229773270}
+    - target: {fileID: 5695848036409051522, guid: ecf7892c4f3fc70488296d13c6c51614, type: 3}
+      propertyPath: attackSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5695848036409051524, guid: ecf7892c4f3fc70488296d13c6c51614, type: 3}
       propertyPath: m_RootOrder
       value: 2

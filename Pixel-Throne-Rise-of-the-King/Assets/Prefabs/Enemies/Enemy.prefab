@@ -248,7 +248,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_TargetDisplay: 0
 --- !u!114 &1404075678
 MonoBehaviour:
@@ -394,9 +394,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1725021849}
-  healthBarFill: {fileID: 0}
-  healthyColor: {r: 0, g: 1, b: 0, a: 1}
-  mediumHealthColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  healthBarFill: {fileID: 114716769}
+  healthyColor: {r: 0.6132076, g: 0, b: 0.07036815, a: 1}
+  mediumHealthColor: {r: 0.7735849, g: 0.003648994, b: 0.04516525, a: 1}
   criticalHealthColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &4209491644955930751
 GameObject:
