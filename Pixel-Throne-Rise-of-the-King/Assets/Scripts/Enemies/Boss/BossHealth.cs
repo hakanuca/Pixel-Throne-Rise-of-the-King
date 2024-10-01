@@ -42,9 +42,11 @@ public class BossHealth : MonoBehaviour
         currentHealth -= damage;
         animator.SetTrigger("Glowing");
         enemyHealthbar.UpdateBossHealthbar();
-        if (currentHealth <= 2 && currentHealth > 0)
+        if ((currentHealth <= 10 || currentHealth <= 5 || currentHealth <= 2) && currentHealth > 0)
         {
             GetComponent<Animator>().SetBool("Defense", true);
+            Boss boss = GetComponent<Boss>();
+            boss.canTakeDamage = false;
         }
 
         if (currentHealth <= 0)

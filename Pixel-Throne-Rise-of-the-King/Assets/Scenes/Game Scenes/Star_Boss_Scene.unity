@@ -2192,8 +2192,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -1.5011997, y: 3.7813501, z: 0}
-    m_Extent: {x: 48.7022, y: 16.65725, z: 0}
+    m_Center: {x: -1.4999008, y: 3.78715, z: 0}
+    m_Extent: {x: 48.7051, y: 16.65925, z: 0}
   m_PointLightInnerAngle: 359.99997
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 1.0094991
@@ -18821,8 +18821,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -1.4945, y: 0.35434997, z: 0}
-    m_Extent: {x: 2.1100001, y: 1.52495, z: 0}
+    m_Center: {x: -1.5016, y: 0.35095, z: 0}
+    m_Extent: {x: 2.1146, y: 1.53545, z: 0}
   m_PointLightInnerAngle: 359.99997
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 1.0094991
@@ -19187,8 +19187,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.57675004, y: 0.07559991, z: 0}
-    m_Extent: {x: 3.31235, y: 2.9101, z: 0}
+    m_Center: {x: -0.58590007, y: 0.07634997, z: 0}
+    m_Extent: {x: 3.3044, y: 2.91415, z: 0}
   m_PointLightInnerAngle: 359.99997
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 1.0094991
@@ -81119,8 +81119,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.30119997, y: 0.334, z: 0}
-    m_Extent: {x: 2.1607, y: 1.5451, z: 0}
+    m_Center: {x: -0.29245, y: 0.3408, z: 0}
+    m_Extent: {x: 2.1656501, y: 1.5507, z: 0}
   m_PointLightInnerAngle: 359.99997
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 1.0094991
@@ -81804,8 +81804,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.87409997, y: 0.3966, z: 0}
-    m_Extent: {x: 3.0177, y: 2.9285, z: 0}
+    m_Center: {x: -0.8734, y: 0.39865005, z: 0}
+    m_Extent: {x: 3.0216, y: 2.93675, z: 0}
   m_PointLightInnerAngle: 359.99997
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 1.0094991
@@ -81827,6 +81827,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 900193299, guid: ecf7892c4f3fc70488296d13c6c51614, type: 3}
+      propertyPath: maxHealth
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 900193299, guid: ecf7892c4f3fc70488296d13c6c51614, type: 3}
       propertyPath: enemyHealthbar
       value: 
