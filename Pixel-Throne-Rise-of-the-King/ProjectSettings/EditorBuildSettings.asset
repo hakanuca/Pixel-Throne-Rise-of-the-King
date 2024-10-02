@@ -45,6 +45,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Game Scenes/Infinity_Map.unity
     guid: f8d49f3433d84b04eabe64da90490a05
   - enabled: 1
+    path: Assets/Scenes/LoadingScenes/Loading_Scene 4.unity
+    guid: d6c3a3f3f39c38d419c318997a1c4fa9
+  - enabled: 1
     path: Assets/Scenes/Game Scenes/Clone_Infinity_Map.unity
     guid: 437d966a1cde6644082f8d81bfc4f8c7
   - enabled: 1
