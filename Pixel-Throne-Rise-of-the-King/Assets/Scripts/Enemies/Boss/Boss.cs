@@ -81,10 +81,8 @@ public class Boss : MonoBehaviour
             isAttacking = true;
             animator.SetTrigger("Attack");
             playerHealth.TakeDamage(attackDamage);
-            if (attackEffect != null)
-            {
-                attackEffect.Play(); // Play the particle effect
-            }
+            attackEffect.Play(); 
+            
             StartCoroutine(AttackCooldown());
         }
     }
