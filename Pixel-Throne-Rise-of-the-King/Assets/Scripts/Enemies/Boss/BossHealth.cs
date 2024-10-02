@@ -98,7 +98,8 @@ public class BossHealth : MonoBehaviour
         {
             collider.enabled = false;
         }
-
+        Boss boss = GetComponent<Boss>();
+        boss.enabled = false;
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (rb != null)
         {

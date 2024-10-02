@@ -662,8 +662,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.1282499, y: -1.1029, z: 0}
-    m_Extent: {x: 2.24405, y: 2.3015, z: 0}
+    m_Center: {x: 1.1309, y: -1.1018999, z: 0}
+    m_Extent: {x: 2.251, y: 2.3048, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -934,7 +934,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1612525177153198059, guid: f037960d392b1d244a7fc0a38881cae3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f037960d392b1d244a7fc0a38881cae3, type: 3}
 --- !u!4 &216705561 stripped
 Transform:
@@ -1007,8 +1008,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -3.1325493, y: -6.20225, z: 0}
-    m_Extent: {x: 42.30745, y: 0.8756499, z: 0}
+    m_Center: {x: -3.1364994, y: -6.19905, z: 0}
+    m_Extent: {x: 42.311203, y: 0.8791499, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1089,8 +1090,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -5.8437, y: 6.23925, z: 0}
-    m_Extent: {x: 1.1454, y: 6.02285, z: 0}
+    m_Center: {x: -5.8385, y: 6.2296, z: 0}
+    m_Extent: {x: 1.1503, y: 6.0174, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7588,8 +7589,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -5.8384504, y: 6.2351, z: 0}
-    m_Extent: {x: 1.14835, y: 6.0225, z: 0}
+    m_Center: {x: -5.8440504, y: 6.23315, z: 0}
+    m_Extent: {x: 1.14585, y: 6.02735, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7733,8 +7734,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.1304, y: -1.1034999, z: 0}
-    m_Extent: {x: 2.2519, y: 2.3071, z: 0}
+    m_Center: {x: 1.13035, y: -1.1040001, z: 0}
+    m_Extent: {x: 2.2476501, y: 2.3084, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -12285,8 +12286,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.13555, y: -1.0919, z: 0}
-    m_Extent: {x: 2.24355, y: 2.3077998, z: 0}
+    m_Center: {x: 1.13845, y: -1.0987, z: 0}
+    m_Extent: {x: 2.24365, y: 2.305, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -12780,8 +12781,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.12195, y: -1.09975, z: 0}
-    m_Extent: {x: 2.24295, y: 2.29995, z: 0}
+    m_Center: {x: 1.1252, y: -1.0910001, z: 0}
+    m_Extent: {x: 2.2419, y: 2.3076, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -13147,8 +13148,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.1295, y: -1.0954, z: 0}
-    m_Extent: {x: 2.2441, y: 2.3028998, z: 0}
+    m_Center: {x: 1.135, y: -1.0968499, z: 0}
+    m_Extent: {x: 2.2456, y: 2.31465, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -14047,8 +14048,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -3.4984512, y: 3.3977501, z: 0}
-    m_Extent: {x: 42.47815, y: 10.01185, z: 0}
+    m_Center: {x: -3.5070496, y: 3.40155, z: 0}
+    m_Extent: {x: 42.47395, y: 10.02215, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -14710,8 +14711,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.1307001, y: -1.1064, z: 0}
-    m_Extent: {x: 2.2521, y: 2.3058, z: 0}
+    m_Center: {x: 1.12765, y: -1.0972, z: 0}
+    m_Extent: {x: 2.24385, y: 2.3045, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -145009,10 +145010,6 @@ PrefabInstance:
       propertyPath: hitEffect
       value: 
       objectReference: {fileID: 987520770}
-    - target: {fileID: 8095947988399510747, guid: 7870a373eaf09154db621bb50fdfd1f8, type: 3}
-      propertyPath: bossAttackDamage
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8095947988399510749, guid: 7870a373eaf09154db621bb50fdfd1f8, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -145298,12 +145295,16 @@ PrefabInstance:
       objectReference: {fileID: 4594907697594359804, guid: c9c6f42a3966e134b8c5b70a140536f4, type: 3}
     - target: {fileID: 7745206232030152086, guid: 424d91a30be4e5947be649594592e6ab, type: 3}
       propertyPath: attackDamage
-      value: 0
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 7745206232030152086, guid: 424d91a30be4e5947be649594592e6ab, type: 3}
       propertyPath: attackEffect
       value: 
       objectReference: {fileID: 1691758020}
+    - target: {fileID: 7745206232030152086, guid: 424d91a30be4e5947be649594592e6ab, type: 3}
+      propertyPath: attackCooldown
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7745206232030152086, guid: 424d91a30be4e5947be649594592e6ab, type: 3}
       propertyPath: spawnAreaMax.x
       value: 110
@@ -145322,7 +145323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7745206232030152087, guid: 424d91a30be4e5947be649594592e6ab, type: 3}
       propertyPath: maxHealth
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7745206232030152087, guid: 424d91a30be4e5947be649594592e6ab, type: 3}
       propertyPath: enemyHealthbar

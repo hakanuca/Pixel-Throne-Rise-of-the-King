@@ -3,16 +3,16 @@ using UnityEngine;
 public class BossArmProjectile : MonoBehaviour
 {
     public Transform player; // Reference to the player
-    public float speed = 5f; // Speed of the projectile
+    public float speed = 7f; // Speed of the projectile
 
-    // Start is called before the first frame update
     void Start()
     {
         // Find the player in the scene
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        // Destroy the projectile after 3 seconds
+        Destroy(gameObject, 6f);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (player != null)
@@ -23,12 +23,13 @@ public class BossArmProjectile : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
     }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
+        // Check if the collision is with the player
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
         }
-        
     }
 }

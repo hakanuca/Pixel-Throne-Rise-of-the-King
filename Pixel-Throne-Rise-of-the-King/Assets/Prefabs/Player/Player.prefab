@@ -327,11 +327,12 @@ MonoBehaviour:
   attackPoint: {fileID: 8095947988363072468}
   attackRange: 1.25
   attackDamage: 1
-  bossAttackDamage: 2
+  bossAttackDamage: 1
   enemyLayers:
     serializedVersion: 2
     m_Bits: 1088
   attackRate: 2
+  hitEffect: {fileID: 0}
 --- !u!114 &8095947988399510738
 MonoBehaviour:
   m_ObjectHideFlags: 0

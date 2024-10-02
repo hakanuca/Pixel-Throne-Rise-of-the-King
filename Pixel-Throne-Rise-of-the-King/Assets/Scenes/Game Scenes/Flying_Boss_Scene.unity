@@ -346,8 +346,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.5245501, y: -0.91515, z: 0}
-    m_Extent: {x: 2.52125, y: 1.97335, z: 0}
+    m_Center: {x: 1.5147998, y: -0.92199993, z: 0}
+    m_Extent: {x: 2.5237, y: 1.9661, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -56249,8 +56249,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -13.92565, y: 0.7537503, z: 0}
-    m_Extent: {x: 40.545547, y: 16.168251, z: 0}
+    m_Center: {x: -13.9272, y: 0.7555003, z: 0}
+    m_Extent: {x: 40.5364, y: 16.1731, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -58182,7 +58182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1230958576}
-  maxHealth: 4
+  maxHealth: 12
   currentHealth: 4
   enemyHealthbar: {fileID: 690771846}
 --- !u!95 &1230958576 stripped
@@ -58318,8 +58318,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.5139, y: -0.91410005, z: 0}
-    m_Extent: {x: 2.5221999, y: 1.9548, z: 0}
+    m_Center: {x: 1.5116, y: -0.91784996, z: 0}
+    m_Extent: {x: 2.5204, y: 1.9588499, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -58535,8 +58535,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 19.173052, y: -35.9058, z: 0}
-    m_Extent: {x: 67.39375, y: 41.1597, z: 0}
+    m_Center: {x: 19.16945, y: -35.90825, z: 0}
+    m_Extent: {x: 67.38995, y: 41.163452, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

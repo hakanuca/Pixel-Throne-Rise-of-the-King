@@ -8,7 +8,7 @@ public class Boss : MonoBehaviour
     public bool canTakeDamage = true;
     public float speed = 2f;
     public float attackRange = 1.5f;
-    public int attackDamage = 10;
+    public float attackDamage = 10;
     public float attackCooldown = 2f; // Cooldown duration in seconds
     private bool canAttack = true; // Flag to check if the boss can attack
     private bool isAttacking = false; // Flag to control movement during attack
