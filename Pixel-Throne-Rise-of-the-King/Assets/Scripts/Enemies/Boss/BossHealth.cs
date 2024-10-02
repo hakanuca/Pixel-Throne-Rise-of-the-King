@@ -40,13 +40,18 @@ public class BossHealth : MonoBehaviour
     {
         if (isInvulnerable) return;
         currentHealth -= damage;
-        animator.SetTrigger("Glowing");
         enemyHealthbar.UpdateBossHealthbar();
-        if ((currentHealth <= 10 || currentHealth <= 5 || currentHealth <= 2) && currentHealth > 0)
+
+        if (currentHealth == 10)
         {
-            GetComponent<Animator>().SetBool("Defense", true);
             Boss boss = GetComponent<Boss>();
-            boss.canTakeDamage = false;
+            boss.DisableDamage();
+            boss.enabled = false;
+            StartCoroutine(HandleDefenseState());
+        }
+        else if (currentHealth == 5)
+        {
+            StartCoroutine(HandleGlow());
         }
 
         if (currentHealth <= 0)
@@ -55,9 +60,34 @@ public class BossHealth : MonoBehaviour
             {
                 animator.SetTrigger("Die");
             }
-            
+
             Die();
         }
+    }
+
+    private IEnumerator HandleDefenseState()
+    {
+        GetComponent<Animator>().SetTrigger("Defense");
+        Boss boss = GetComponent<Boss>();
+        boss.DisableDamage();
+        boss.enabled = false;
+        yield return new WaitForSeconds(3f);
+        boss.EnableDamage();
+        boss.enabled = true;
+        GetComponent<Animator>().SetTrigger("Default");
+
+    }
+
+    private IEnumerator HandleGlow()
+    {
+        animator.SetTrigger("Glowing");
+        Boss boss = GetComponent<Boss>();
+        StartCoroutine(boss.SpawnObjectRoutine());
+        boss.DisableDamage();
+        boss.enabled = false;
+        yield return new WaitForSeconds(3f);
+        boss.EnableDamage();
+        boss.enabled = true; 
     }
 
     private void Die()

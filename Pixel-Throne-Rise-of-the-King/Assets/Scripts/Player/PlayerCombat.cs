@@ -10,6 +10,7 @@ public class PlayerCombat : MonoBehaviour
     public LayerMask enemyLayers;
     public float attackRate = 2f;
     private float nextAttackTime = 0f;
+    public ParticleSystem hitEffect; // Add a reference to the particle system
 
     private void Update()
     {
@@ -54,6 +55,10 @@ public class PlayerCombat : MonoBehaviour
             {
                 bossHealth.TakeDamage(bossAttackDamage);
                 animator.SetTrigger("Hit");
+                if (hitEffect != null)
+                {
+                    hitEffect.Play(); // Play the particle effect
+                }
             }
         }
     }
