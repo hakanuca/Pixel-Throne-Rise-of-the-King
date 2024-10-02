@@ -662,8 +662,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.1309, y: -1.1018999, z: 0}
-    m_Extent: {x: 2.251, y: 2.3048, z: 0}
+    m_Center: {x: 1.13075, y: -1.0936501, z: 0}
+    m_Extent: {x: 2.25015, y: 2.30265, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1008,8 +1008,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -3.1364994, y: -6.19905, z: 0}
-    m_Extent: {x: 42.311203, y: 0.8791499, z: 0}
+    m_Center: {x: -3.1376, y: -6.20255, z: 0}
+    m_Extent: {x: 42.3125, y: 0.87214994, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1090,8 +1090,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -5.8385, y: 6.2296, z: 0}
-    m_Extent: {x: 1.1503, y: 6.0174, z: 0}
+    m_Center: {x: -5.83475, y: 6.2283998, z: 0}
+    m_Extent: {x: 1.1438501, y: 6.0278, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7589,8 +7589,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -5.8440504, y: 6.23315, z: 0}
-    m_Extent: {x: 1.14585, y: 6.02735, z: 0}
+    m_Center: {x: -5.8386497, y: 6.23285, z: 0}
+    m_Extent: {x: 1.1412499, y: 6.02005, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7734,8 +7734,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.13035, y: -1.1040001, z: 0}
-    m_Extent: {x: 2.2476501, y: 2.3084, z: 0}
+    m_Center: {x: 1.1340499, y: -1.1011, z: 0}
+    m_Extent: {x: 2.25075, y: 2.3105001, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -12286,8 +12286,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.13845, y: -1.0987, z: 0}
-    m_Extent: {x: 2.24365, y: 2.305, z: 0}
+    m_Center: {x: 1.1342499, y: -1.10605, z: 0}
+    m_Extent: {x: 2.25015, y: 2.30655, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -12781,8 +12781,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.1252, y: -1.0910001, z: 0}
-    m_Extent: {x: 2.2419, y: 2.3076, z: 0}
+    m_Center: {x: 1.1242, y: -1.1014001, z: 0}
+    m_Extent: {x: 2.2417998, y: 2.3023, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -13148,8 +13148,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.135, y: -1.0968499, z: 0}
-    m_Extent: {x: 2.2456, y: 2.31465, z: 0}
+    m_Center: {x: 1.1366, y: -1.0892501, z: 0}
+    m_Extent: {x: 2.2463999, y: 2.30565, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -14048,8 +14048,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -3.5070496, y: 3.40155, z: 0}
-    m_Extent: {x: 42.47395, y: 10.02215, z: 0}
+    m_Center: {x: -3.5037994, y: 3.40315, z: 0}
+    m_Extent: {x: 42.4726, y: 10.02055, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -14711,8 +14711,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.12765, y: -1.0972, z: 0}
-    m_Extent: {x: 2.24385, y: 2.3045, z: 0}
+    m_Center: {x: 1.1331999, y: -1.1004499, z: 0}
+    m_Extent: {x: 2.2497, y: 2.30765, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -145323,7 +145323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7745206232030152087, guid: 424d91a30be4e5947be649594592e6ab, type: 3}
       propertyPath: maxHealth
-      value: 25
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7745206232030152087, guid: 424d91a30be4e5947be649594592e6ab, type: 3}
       propertyPath: enemyHealthbar
