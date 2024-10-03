@@ -18,7 +18,7 @@ public class SceneStartAnimation : MonoBehaviour
     [SerializeField] private ParticleSystem playerInvisibleEffect;
     private bool hasAnimationPlayed = false; 
 
-    private void Start()
+    private void Awake()
     {
         if (!hasAnimationPlayed) 
         {

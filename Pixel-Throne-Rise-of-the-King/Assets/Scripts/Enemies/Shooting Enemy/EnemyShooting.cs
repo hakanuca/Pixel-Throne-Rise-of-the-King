@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
+using System;
 using UnityEngine;
 
 public class EnemyShooting : MonoBehaviour
@@ -9,36 +7,45 @@ public class EnemyShooting : MonoBehaviour
     public Transform bulletPosition;
     private float timer;
     private GameObject player;
+    [SerializeField] private float shootingDistance = 10f; 
+    [SerializeField] private float cooldownTime = 2f;
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        timer = cooldownTime; 
+        timer = 0;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        timer += Time.deltaTime;
+        player = GameObject.FindGameObjectWithTag("Player");
+        timer += Time.deltaTime; 
+        Debug.Log("Player is null");
         if (player != null)
         {
+            Debug.Log("Player is not null");
             float distance = Vector2.Distance(transform.position, player.transform.position);
-            if (distance < 10)
+            if (distance < shootingDistance && timer >= cooldownTime)
             {
-                timer += Time.deltaTime;
-                if (timer > 2)
-                {
-                    timer = 0;
-                    shoot();
-                }
-
+                Shoot();
+                timer = 0; 
             }
         }
-        
-        
-
     }
-    void shoot()
+
+    private void Shoot()
     {
+        Debug.Log("Shooting");
         Instantiate(bullet, bulletPosition.position, Quaternion.identity);
+    }
+
+    // Draw the shooting range in the Scene view
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, shootingDistance);
     }
 }

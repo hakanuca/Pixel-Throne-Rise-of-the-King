@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private float startingHealth;
-    public float currentHealth { get; private set; }
+    public float startingHealth;
+    public float currentHealth;
     public Animator anim;
     private bool dead;
     private bool cooldownActive = false;
