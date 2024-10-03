@@ -17,7 +17,7 @@ public class BossLevelManager : MonoBehaviour
 
     private void Update()
     {
-        if (bossHealth == null)
+        if (bossHealth == null || bossHealth.currentHealth <= 0)
         {
             OpenDoorsOnBossDeath();
         }

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5695848036409051546}
   - component: {fileID: 5695848036409051523}
   - component: {fileID: 5695848036409051520}
-  - component: {fileID: 5695848036409051521}
   - component: {fileID: 5695848036409051527}
   - component: {fileID: 5695848036409051522}
   - component: {fileID: 900193299}
@@ -149,21 +148,6 @@ CircleCollider2D:
   m_Offset: {x: -0.010620177, y: -0.12744069}
   serializedVersion: 2
   m_Radius: 0.86496663
---- !u!114 &5695848036409051521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5695848036409051547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dc67c380b7c4854bbf2d96ba9eb94b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  isFlipped: 0
-  canTakeDamage: 1
 --- !u!114 &5695848036409051527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,7 +178,8 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
-  attackSpeed: 10
+  attackSpeed: 5
+  attackRange: 10
 --- !u!114 &900193299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,6 +193,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5695848036409051546}
-  maxHealth: 4
+  maxHealth: 20
   currentHealth: 4
   enemyHealthbar: {fileID: 0}

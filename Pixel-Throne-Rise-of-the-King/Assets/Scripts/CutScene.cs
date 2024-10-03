@@ -3,18 +3,18 @@ using UnityEngine.SceneManagement;
 
 public class CutScene : MonoBehaviour
 {
-    void Update()
+    /*void Update()
     {
         if (Input.GetKeyDown(KeyCode.O))
         {
             Skip();
         }
-    }
+    }*/
 
-    public void Skip()
+    /*public void Skip()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+    }*/
 
     public void MainMenu()
     {

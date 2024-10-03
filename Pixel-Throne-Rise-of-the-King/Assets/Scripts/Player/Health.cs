@@ -22,13 +22,13 @@ public class Health : MonoBehaviour
         isInvincible = false;
     }
 
-    private void Update()
+    /*private void Update()
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
             isInvincible = !isInvincible;
         }
-    }
+    }*/
 
     public void TakeDamage(float _damage)
     {

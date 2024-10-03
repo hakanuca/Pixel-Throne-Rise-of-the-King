@@ -2192,8 +2192,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -1.5004005, y: 3.7782001, z: 0}
-    m_Extent: {x: 48.7105, y: 16.6534, z: 0}
+    m_Center: {x: -1.5075512, y: 3.7845502, z: 0}
+    m_Extent: {x: 48.710052, y: 16.64985, z: 0}
   m_PointLightInnerAngle: 359.99997
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 1.0094991
@@ -6509,6 +6509,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 37, y: 56, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 100
+      m_TileSpriteIndex: 100
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 38, y: 56, z: 0}
     second:
       serializedVersion: 2
@@ -6540,6 +6550,16 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: 41, y: 56, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 100
+      m_TileSpriteIndex: 100
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 42, y: 56, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 100
@@ -7471,7 +7491,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 73cdec753b356834480e4e0c23d4b4c6, type: 2}
   - m_RefCount: 14
     m_Data: {fileID: 11400000, guid: 57f26d5c6ad3f2c41a4c05187ff2ec82, type: 2}
-  - m_RefCount: 89
+  - m_RefCount: 91
     m_Data: {fileID: 11400000, guid: e89a6368384a91a40beb7d1044f902f7, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -7674,10 +7694,10 @@ Tilemap:
     m_Data: {fileID: 332761904, guid: 20d1dd276ab6d594694c80e9615eae9f, type: 3}
   - m_RefCount: 14
     m_Data: {fileID: -1057127143, guid: 20d1dd276ab6d594694c80e9615eae9f, type: 3}
-  - m_RefCount: 89
+  - m_RefCount: 91
     m_Data: {fileID: -931066951, guid: 20d1dd276ab6d594694c80e9615eae9f, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 314
+  - m_RefCount: 316
     m_Data:
       e00: 1
       e01: 0
@@ -7696,7 +7716,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 314
+  - m_RefCount: 316
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -18821,8 +18841,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -1.50045, y: 0.35219997, z: 0}
-    m_Extent: {x: 2.11595, y: 1.5213001, z: 0}
+    m_Center: {x: -1.4976, y: 0.34684998, z: 0}
+    m_Extent: {x: 2.1054, y: 1.52965, z: 0}
   m_PointLightInnerAngle: 359.99997
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 1.0094991
@@ -19187,8 +19207,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.58645, y: 0.07029998, z: 0}
-    m_Extent: {x: 3.3088498, y: 2.9129, z: 0}
+    m_Center: {x: -0.5732, y: 0.0812, z: 0}
+    m_Extent: {x: 3.3051, y: 2.9147, z: 0}
   m_PointLightInnerAngle: 359.99997
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 1.0094991
@@ -81119,8 +81139,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.29864997, y: 0.3405, z: 0}
-    m_Extent: {x: 2.1626499, y: 1.5489, z: 0}
+    m_Center: {x: -0.28585, y: 0.34069997, z: 0}
+    m_Extent: {x: 2.16215, y: 1.5486, z: 0}
   m_PointLightInnerAngle: 359.99997
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 1.0094991
@@ -81804,8 +81824,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.87755, y: 0.39884996, z: 0}
-    m_Extent: {x: 3.0163498, y: 2.92445, z: 0}
+    m_Center: {x: -0.8764999, y: 0.4008, z: 0}
+    m_Extent: {x: 3.0151, y: 2.9301, z: 0}
   m_PointLightInnerAngle: 359.99997
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 1.0094991
@@ -81829,19 +81849,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 900193299, guid: ecf7892c4f3fc70488296d13c6c51614, type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 900193299, guid: ecf7892c4f3fc70488296d13c6c51614, type: 3}
       propertyPath: enemyHealthbar
       value: 
       objectReference: {fileID: 2100028993}
-    - target: {fileID: 5695848036409051521, guid: ecf7892c4f3fc70488296d13c6c51614, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 229773270}
+    - target: {fileID: 5695848036409051522, guid: ecf7892c4f3fc70488296d13c6c51614, type: 3}
+      propertyPath: cooldown
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5695848036409051522, guid: ecf7892c4f3fc70488296d13c6c51614, type: 3}
+      propertyPath: attackRange
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 5695848036409051522, guid: ecf7892c4f3fc70488296d13c6c51614, type: 3}
       propertyPath: attackSpeed
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5695848036409051524, guid: ecf7892c4f3fc70488296d13c6c51614, type: 3}
       propertyPath: m_RootOrder
@@ -81890,6 +81914,10 @@ PrefabInstance:
     - target: {fileID: 5695848036409051547, guid: ecf7892c4f3fc70488296d13c6c51614, type: 3}
       propertyPath: m_Name
       value: StarBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 5695848036409051547, guid: ecf7892c4f3fc70488296d13c6c51614, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecf7892c4f3fc70488296d13c6c51614, type: 3}

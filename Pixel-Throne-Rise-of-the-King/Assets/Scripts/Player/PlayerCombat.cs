@@ -66,10 +66,10 @@ public class PlayerCombat : MonoBehaviour
     private void AttackMiniBoss()
     {
         animator.SetTrigger("Attack");
-        Collider2D bossHealthCollider = Physics2D.OverlapCircle(attackPoint.position, attackRange, LayerMask.GetMask("Boss"));
-        if (bossHealthCollider != null)
+        Collider2D miniBossHealthCollider = Physics2D.OverlapCircle(attackPoint.position, attackRange, LayerMask.GetMask("Boss"));
+        if (miniBossHealthCollider != null)
         {
-            StarHealth starHealth = bossHealthCollider.GetComponent<StarHealth>();
+            StarHealth starHealth = miniBossHealthCollider.GetComponent<StarHealth>();
             if (starHealth != null)
             {
                 starHealth.TakeDamage(bossAttackDamage);

@@ -14,13 +14,13 @@ public class StarAttack : StateMachineBehaviour
         starMiniboss = animator.GetComponent<Boss>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
-        starMiniboss.LookAtPlayer();
+        starMiniboss?.LookAtPlayer();
         lastPosition = rb.position;
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        starMiniboss.LookAtPlayer();
+        starMiniboss?.LookAtPlayer();
         Vector2 target = new Vector2(player.position.x, rb.position.y);
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, increasedSpeed * Time.fixedDeltaTime);
         rb.MovePosition(newPos);
