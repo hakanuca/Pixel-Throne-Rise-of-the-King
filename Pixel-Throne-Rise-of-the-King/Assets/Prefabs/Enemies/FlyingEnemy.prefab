@@ -513,7 +513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 534168935}
-  maxHealth: 5
+  maxHealth: 2
   currentHealth: 0
   enemyHealthbar: {fileID: 2111314618}
   speed: 2
