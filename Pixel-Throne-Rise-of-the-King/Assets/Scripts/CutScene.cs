@@ -11,10 +11,10 @@ public class CutScene : MonoBehaviour
         }
     }*/
 
-    /*public void Skip()
+    public void Skip()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }*/
+    }
 
     public void MainMenu()
     {
